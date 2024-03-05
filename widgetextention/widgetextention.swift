@@ -50,14 +50,15 @@ struct widgetextentionEntryView : View {
     var body: some View {
         VStack {
             Spacer()
-            Text(timerInterval: start...end, countsDown: true)
+           // Text(timerInterval: start...end, countsDown: true)
+            Text("Widget for Pomodoro with Kitties")
             Spacer()
         } .onAppear {
-            let sharedUserDefaults = UserDefaults(suiteName: appGroup)
-            if let timer = sharedUserDefaults?.value(forKey: "timer") as? Double {
-                print(timer)
-                end = Calendar.current.date(byAdding: .second, value: Int(timer), to: Date.now)!
-            }
+//            let sharedUserDefaults = UserDefaults(suiteName: appGroup)
+//            if let timer = sharedUserDefaults?.value(forKey: "timer") as? Double {
+//                print(timer)
+//                end = Calendar.current.date(byAdding: .second, value: Int(timer), to: Date.now)!
+//            }
         }
     }
 }
