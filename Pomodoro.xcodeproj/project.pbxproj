@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A73737A12B97E40900763044 /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73737A02B97E40900763044 /* WatchConnector.swift */; };
+		A73737A32B97E47100763044 /* WatchToIOSConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73737A22B97E47100763044 /* WatchToIOSConnector.swift */; };
+		A73737A52B97E6F900763044 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73737A42B97E6F900763044 /* Counter.swift */; };
+		A73737A82B97F15C00763044 /* CounterWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73737A72B97F15C00763044 /* CounterWatch.swift */; };
 		A75A8B8B2B8FEF5E00CECAE5 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A8B8A2B8FEF5E00CECAE5 /* Categories.swift */; };
 		A75A8B8D2B8FF13000CECAE5 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A8B8C2B8FF13000CECAE5 /* CategoriesView.swift */; };
-		A764A7002B969B4100C9F78F /* PomodoroWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A764A6FF2B969B4100C9F78F /* PomodoroWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A764A7052B969B4100C9F78F /* PomodoroWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764A7042B969B4100C9F78F /* PomodoroWatchApp.swift */; };
-		A764A7072B969B4100C9F78F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764A7062B969B4100C9F78F /* ContentView.swift */; };
-		A764A7092B969B4300C9F78F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A764A7082B969B4300C9F78F /* Assets.xcassets */; };
-		A764A70C2B969B4300C9F78F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A764A70B2B969B4300C9F78F /* Preview Assets.xcassets */; };
+		A78570C52B97C7A500C43847 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78570C42B97C7A500C43847 /* WatchConnectivity.framework */; };
+		A78570D02B97CA8F00C43847 /* PomodoroWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78570CF2B97CA8F00C43847 /* PomodoroWatchApp.swift */; };
+		A78570D22B97CA8F00C43847 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78570D12B97CA8F00C43847 /* ContentView.swift */; };
+		A78570D42B97CA9100C43847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78570D32B97CA9100C43847 /* Assets.xcassets */; };
+		A78570D72B97CA9100C43847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78570D62B97CA9100C43847 /* Preview Assets.xcassets */; };
+		A78570DA2B97CA9100C43847 /* PomodoroWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A78570CD2B97CA8F00C43847 /* PomodoroWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A78570DE2B97CAA900C43847 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78570C62B97C7AE00C43847 /* WatchConnectivity.framework */; };
 		A7B3A5102B8D34FB0025495E /* PomodoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3A50F2B8D34FB0025495E /* PomodoroApp.swift */; };
 		A7B3A5142B8D34FD0025495E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B3A5132B8D34FD0025495E /* Assets.xcassets */; };
 		A7B3A5172B8D34FD0025495E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B3A5162B8D34FD0025495E /* Preview Assets.xcassets */; };
@@ -32,11 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A764A7012B969B4100C9F78F /* PBXContainerItemProxy */ = {
+		A78570D82B97CA9100C43847 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A7B3A5042B8D34FB0025495E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A764A6FE2B969B4100C9F78F;
+			remoteGlobalIDString = A78570CC2B97CA8F00C43847;
 			remoteInfo = "PomodoroWatch Watch App";
 		};
 		A7D6D5902B925DA000C97719 /* PBXContainerItemProxy */ = {
@@ -49,13 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A764A70F2B969B4300C9F78F /* Embed Watch Content */ = {
+		A78570C02B97C64000C43847 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				A764A7002B969B4100C9F78F /* PomodoroWatch Watch App.app in Embed Watch Content */,
+				A78570DA2B97CA9100C43847 /* PomodoroWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,14 +80,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A73737A02B97E40900763044 /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
+		A73737A22B97E47100763044 /* WatchToIOSConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchToIOSConnector.swift; sourceTree = "<group>"; };
+		A73737A42B97E6F900763044 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		A73737A72B97F15C00763044 /* CounterWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterWatch.swift; sourceTree = "<group>"; };
 		A75A8B8A2B8FEF5E00CECAE5 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		A75A8B8C2B8FF13000CECAE5 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
-		A764A6FA2B969B4100C9F78F /* PomodoroWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A764A6FF2B969B4100C9F78F /* PomodoroWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PomodoroWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A764A7042B969B4100C9F78F /* PomodoroWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroWatchApp.swift; sourceTree = "<group>"; };
-		A764A7062B969B4100C9F78F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A764A7082B969B4300C9F78F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A764A70B2B969B4300C9F78F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A78570C42B97C7A500C43847 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		A78570C62B97C7AE00C43847 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.2.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		A78570CD2B97CA8F00C43847 /* PomodoroWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PomodoroWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A78570CF2B97CA8F00C43847 /* PomodoroWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroWatchApp.swift; sourceTree = "<group>"; };
+		A78570D12B97CA8F00C43847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A78570D32B97CA9100C43847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A78570D62B97CA9100C43847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A7B3A50C2B8D34FB0025495E /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B3A50F2B8D34FB0025495E /* PomodoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroApp.swift; sourceTree = "<group>"; };
 		A7B3A5132B8D34FD0025495E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,10 +115,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A764A6FC2B969B4100C9F78F /* Frameworks */ = {
+		A78570CA2B97CA8F00C43847 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78570DE2B97CAA900C43847 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78570C52B97C7A500C43847 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,21 +143,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A764A7032B969B4100C9F78F /* PomodoroWatch Watch App */ = {
+		A78570CE2B97CA8F00C43847 /* PomodoroWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				A764A7042B969B4100C9F78F /* PomodoroWatchApp.swift */,
-				A764A7062B969B4100C9F78F /* ContentView.swift */,
-				A764A7082B969B4300C9F78F /* Assets.xcassets */,
-				A764A70A2B969B4300C9F78F /* Preview Content */,
+				A78570CF2B97CA8F00C43847 /* PomodoroWatchApp.swift */,
+				A73737A72B97F15C00763044 /* CounterWatch.swift */,
+				A78570D12B97CA8F00C43847 /* ContentView.swift */,
+				A78570D32B97CA9100C43847 /* Assets.xcassets */,
+				A78570D52B97CA9100C43847 /* Preview Content */,
+				A73737A22B97E47100763044 /* WatchToIOSConnector.swift */,
 			);
 			path = "PomodoroWatch Watch App";
 			sourceTree = "<group>";
 		};
-		A764A70A2B969B4300C9F78F /* Preview Content */ = {
+		A78570D52B97CA9100C43847 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				A764A70B2B969B4300C9F78F /* Preview Assets.xcassets */,
+				A78570D62B97CA9100C43847 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -155,7 +170,7 @@
 				A7D6D5982B926A0000C97719 /* widgetextentionExtension.entitlements */,
 				A7B3A50E2B8D34FB0025495E /* Pomodoro */,
 				A7D6D5842B925D9E00C97719 /* widgetextention */,
-				A764A7032B969B4100C9F78F /* PomodoroWatch Watch App */,
+				A78570CE2B97CA8F00C43847 /* PomodoroWatch Watch App */,
 				A7D6D57F2B925D9E00C97719 /* Frameworks */,
 				A7B3A50D2B8D34FB0025495E /* Products */,
 			);
@@ -166,8 +181,7 @@
 			children = (
 				A7B3A50C2B8D34FB0025495E /* Pomodoro.app */,
 				A7D6D57E2B925D9E00C97719 /* widgetextentionExtension.appex */,
-				A764A6FA2B969B4100C9F78F /* PomodoroWatch.app */,
-				A764A6FF2B969B4100C9F78F /* PomodoroWatch Watch App.app */,
+				A78570CD2B97CA8F00C43847 /* PomodoroWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,6 +196,8 @@
 				A75A8B8C2B8FF13000CECAE5 /* CategoriesView.swift */,
 				A7D6D5992B926B7300C97719 /* Constants.swift */,
 				A7B3A51D2B8D351B0025495E /* TimerView.swift */,
+				A73737A42B97E6F900763044 /* Counter.swift */,
+				A73737A02B97E40900763044 /* WatchConnector.swift */,
 				A7B3A5132B8D34FD0025495E /* Assets.xcassets */,
 				A7B3A5152B8D34FD0025495E /* Preview Content */,
 			);
@@ -199,6 +215,8 @@
 		A7D6D57F2B925D9E00C97719 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A78570C42B97C7A500C43847 /* WatchConnectivity.framework */,
+				A78570C62B97C7AE00C43847 /* WatchConnectivity.framework */,
 				A7D6D5802B925D9E00C97719 /* WidgetKit.framework */,
 				A7D6D5822B925D9E00C97719 /* SwiftUI.framework */,
 			);
@@ -222,30 +240,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A764A6F92B969B4100C9F78F /* PomodoroWatch */ = {
+		A78570CC2B97CA8F00C43847 /* PomodoroWatch Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A764A7132B969B4300C9F78F /* Build configuration list for PBXNativeTarget "PomodoroWatch" */;
+			buildConfigurationList = A78570DB2B97CA9100C43847 /* Build configuration list for PBXNativeTarget "PomodoroWatch Watch App" */;
 			buildPhases = (
-				A764A6F82B969B4100C9F78F /* Resources */,
-				A764A70F2B969B4300C9F78F /* Embed Watch Content */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A764A7022B969B4100C9F78F /* PBXTargetDependency */,
-			);
-			name = PomodoroWatch;
-			productName = PomodoroWatch;
-			productReference = A764A6FA2B969B4100C9F78F /* PomodoroWatch.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
-		};
-		A764A6FE2B969B4100C9F78F /* PomodoroWatch Watch App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A764A7122B969B4300C9F78F /* Build configuration list for PBXNativeTarget "PomodoroWatch Watch App" */;
-			buildPhases = (
-				A764A6FB2B969B4100C9F78F /* Sources */,
-				A764A6FC2B969B4100C9F78F /* Frameworks */,
-				A764A6FD2B969B4100C9F78F /* Resources */,
+				A78570C92B97CA8F00C43847 /* Sources */,
+				A78570CA2B97CA8F00C43847 /* Frameworks */,
+				A78570CB2B97CA8F00C43847 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -253,7 +254,7 @@
 			);
 			name = "PomodoroWatch Watch App";
 			productName = "PomodoroWatch Watch App";
-			productReference = A764A6FF2B969B4100C9F78F /* PomodoroWatch Watch App.app */;
+			productReference = A78570CD2B97CA8F00C43847 /* PomodoroWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A7B3A50B2B8D34FB0025495E /* Pomodoro */ = {
@@ -264,11 +265,13 @@
 				A7B3A5092B8D34FB0025495E /* Frameworks */,
 				A7B3A50A2B8D34FB0025495E /* Resources */,
 				A7D6D5932B925DA000C97719 /* Embed Foundation Extensions */,
+				A78570C02B97C64000C43847 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				A7D6D5912B925DA000C97719 /* PBXTargetDependency */,
+				A78570D92B97CA9100C43847 /* PBXTargetDependency */,
 			);
 			name = Pomodoro;
 			productName = Pomodoro;
@@ -302,10 +305,7 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					A764A6F92B969B4100C9F78F = {
-						CreatedOnToolsVersion = 15.2;
-					};
-					A764A6FE2B969B4100C9F78F = {
+					A78570CC2B97CA8F00C43847 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 					A7B3A50B2B8D34FB0025495E = {
@@ -331,26 +331,18 @@
 			targets = (
 				A7B3A50B2B8D34FB0025495E /* Pomodoro */,
 				A7D6D57D2B925D9E00C97719 /* widgetextentionExtension */,
-				A764A6F92B969B4100C9F78F /* PomodoroWatch */,
-				A764A6FE2B969B4100C9F78F /* PomodoroWatch Watch App */,
+				A78570CC2B97CA8F00C43847 /* PomodoroWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A764A6F82B969B4100C9F78F /* Resources */ = {
+		A78570CB2B97CA8F00C43847 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A764A6FD2B969B4100C9F78F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A764A70C2B969B4300C9F78F /* Preview Assets.xcassets in Resources */,
-				A764A7092B969B4300C9F78F /* Assets.xcassets in Resources */,
+				A78570D72B97CA9100C43847 /* Preview Assets.xcassets in Resources */,
+				A78570D42B97CA9100C43847 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,12 +366,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A764A6FB2B969B4100C9F78F /* Sources */ = {
+		A78570C92B97CA8F00C43847 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A764A7072B969B4100C9F78F /* ContentView.swift in Sources */,
-				A764A7052B969B4100C9F78F /* PomodoroWatchApp.swift in Sources */,
+				A73737A82B97F15C00763044 /* CounterWatch.swift in Sources */,
+				A78570D22B97CA8F00C43847 /* ContentView.swift in Sources */,
+				A73737A32B97E47100763044 /* WatchToIOSConnector.swift in Sources */,
+				A78570D02B97CA8F00C43847 /* PomodoroWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +383,8 @@
 			files = (
 				A7B3A51E2B8D351B0025495E /* TimerView.swift in Sources */,
 				A75A8B8B2B8FEF5E00CECAE5 /* Categories.swift in Sources */,
+				A73737A12B97E40900763044 /* WatchConnector.swift in Sources */,
+				A73737A52B97E6F900763044 /* Counter.swift in Sources */,
 				A7B3A5102B8D34FB0025495E /* PomodoroApp.swift in Sources */,
 				A75A8B8D2B8FF13000CECAE5 /* CategoriesView.swift in Sources */,
 				A7B3A5202B8D3DA10025495E /* Utils.swift in Sources */,
@@ -411,10 +407,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A764A7022B969B4100C9F78F /* PBXTargetDependency */ = {
+		A78570D92B97CA9100C43847 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A764A6FE2B969B4100C9F78F /* PomodoroWatch Watch App */;
-			targetProxy = A764A7012B969B4100C9F78F /* PBXContainerItemProxy */;
+			target = A78570CC2B97CA8F00C43847 /* PomodoroWatch Watch App */;
+			targetProxy = A78570D82B97CA9100C43847 /* PBXContainerItemProxy */;
 		};
 		A7D6D5912B925DA000C97719 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -424,37 +420,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A764A70D2B969B4300C9F78F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DFJUFQ6A3N;
-				INFOPLIST_KEY_CFBundleDisplayName = PomodoroWatch;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tpdias.PomodoroWatch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		A764A70E2B969B4300C9F78F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DFJUFQ6A3N;
-				INFOPLIST_KEY_CFBundleDisplayName = PomodoroWatch;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tpdias.PomodoroWatch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		A764A7102B969B4300C9F78F /* Debug */ = {
+		A78570DC2B97CA9100C43847 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -467,13 +433,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = PomodoroWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKWatchOnly = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tpdias.Pomodoro;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tpdias.PomodoroWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tpdias.Pomodoro.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -484,7 +450,7 @@
 			};
 			name = Debug;
 		};
-		A764A7112B969B4300C9F78F /* Release */ = {
+		A78570DD2B97CA9100C43847 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -497,13 +463,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = PomodoroWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKWatchOnly = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tpdias.Pomodoro;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tpdias.PomodoroWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tpdias.Pomodoro.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -754,20 +720,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A764A7122B969B4300C9F78F /* Build configuration list for PBXNativeTarget "PomodoroWatch Watch App" */ = {
+		A78570DB2B97CA9100C43847 /* Build configuration list for PBXNativeTarget "PomodoroWatch Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A764A7102B969B4300C9F78F /* Debug */,
-				A764A7112B969B4300C9F78F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A764A7132B969B4300C9F78F /* Build configuration list for PBXNativeTarget "PomodoroWatch" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A764A70D2B969B4300C9F78F /* Debug */,
-				A764A70E2B969B4300C9F78F /* Release */,
+				A78570DC2B97CA9100C43847 /* Debug */,
+				A78570DD2B97CA9100C43847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

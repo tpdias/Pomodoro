@@ -2,17 +2,15 @@
 //  ContentView.swift
 //  PomodoroWatch Watch App
 //
-//  Created by Thiago Parisotto on 04/03/24.
+//  Created by Thiago Parisotto on 05/03/24.
 //
 
 import SwiftUI
+import WatchConnectivity
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
             Text("Hello, world!")
         }
         .padding()
