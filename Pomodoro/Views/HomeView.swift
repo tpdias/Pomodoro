@@ -57,7 +57,7 @@ struct HomeView: View {
                     Image(curCat)
                         .resizable()
                         .frame(width: 290, height: 290)
-                    NavigationLink(destination: TimerView(timer: pomoTime, pausedTimer: pomoPauseTimer, cat: curCat), label: {
+                    NavigationLink(destination: TimerView(time: pomoTime, pausedTimer: pomoPauseTimer, cat: curCat), label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 90)
                                 .fill(Color(red: 0.48, green: 0.70, blue: 0.55))

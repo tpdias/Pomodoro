@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct TimerView: View {
-    @State var timer: Double
     @State var pausedTimer: Double
     @State var paused: Bool = false
     @State var backColor: Color = .green
@@ -11,11 +10,13 @@ struct TimerView: View {
     var cat: String
     @State var textColor: Color = .white
     
-    @State var progress: Double = 0
-    let timerInterval: TimeInterval = 1.0
-    
-    
+    @StateObject var pomodoro = Pomodoro(timer: 25 * 60, tag: Tag(name: "Study", color: "green"))
 
+    init(time: Double, pausedTimer: Double, cat: String) {
+        self.initialPomoTime = time
+        self.cat = cat
+        self.pausedTimer = pausedTimer
+    }
     
     var body: some View {
         NavigationView {
@@ -35,7 +36,7 @@ struct TimerView: View {
                                 .bold()
                                 .foregroundColor(textColor)
                         } else {
-                            Text(String(format: "%02d:%02d", Int(timer) / 60, Int(timer) % 60))
+                            Text(String(format: "%02d:%02d", Int(pomodoro.timer) / 60, Int(pomodoro.timer) % 60))
                                 .font(.system(size: 80))
                                 .bold()
                                 .foregroundColor(textColor)
@@ -46,13 +47,14 @@ struct TimerView: View {
                         Spacer()
                     }
                 }
-                .onReceive(Timer.publish(every: timerInterval, on: .main, in: .common).autoconnect()) { _ in
+                .onReceive(Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()) { _ in
                     if !paused {
                         if(curSesh%2 == 0) {
-                            if timer > 0 {
-                                timer -= 1
+                            if pomodoro.timer > 0 {
+                               
+                                pomodoro.decrement()
                             } else {
-                                timer = initialPomoTime
+                                pomodoro.resetTimer(initialTime: initialPomoTime)
                                 changeSesh()
                             }
                         }
@@ -80,7 +82,7 @@ struct TimerView: View {
             changePauseStatus()
         }
         .onAppear {
-            self.initialPomoTime = timer
+            self.pomodoro.resetTimer(initialTime: initialPomoTime)
             self.initialPauseTime = pausedTimer
         }
     }
@@ -99,6 +101,6 @@ struct TimerView: View {
         vibrate(with: .light)
         textColor = .white
         paused.toggle()
-        
     }
+    
 }

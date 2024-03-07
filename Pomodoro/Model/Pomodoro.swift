@@ -6,13 +6,54 @@
 //
 
 import Foundation
+import UIKit
+import WatchConnectivity
+import Combine
 
-class Pomodoro {
-    var time: Double
-    var tag: Tag
+class Pomodoro: ObservableObject {
+    var session: WCSession
+    let delegate: WCSessionDelegate
+    let subject = PassthroughSubject<Double, Never>()
     
-    init(time: Double, tag: Tag) {
-        self.time = time
+    @Published private(set) var timer: Double = 25 * 60
+    @Published private(set) var date: Double = Date.timeIntervalSinceReferenceDate.magnitude
+    
+    private var cancellables = Set<AnyCancellable>() 
+
+    var tag: Tag
+    var id = UUID()
+    
+    init(timer: Double, tag: Tag, session: WCSession = .default) {
+        self.timer = timer
         self.tag = tag
+        
+        self.delegate = SessionDelegater(curTimer: subject)
+                self.session = session
+                self.session.delegate = self.delegate
+                self.session.activate()
+                
+                subject
+                    .receive(on: DispatchQueue.main)
+                    .sink(receiveValue: { newTimer in
+                        // Check if the received timer is less than the current timer
+                        if newTimer < self.timer {
+                            // Update the timer only if the received timer is less
+                            self.timer = newTimer
+                        }
+                    })
+                    .store(in: &cancellables)
+    }
+    
+    func decrement() {
+        timer -= 1
+        session.sendMessage(["timer": timer], replyHandler: nil) { error in
+            print(error.localizedDescription)
+        }
+    }
+    func resetTimer(initialTime: Double) {
+        timer = initialTime
+        session.sendMessage(["timer": timer], replyHandler: nil) { error in
+            print(error.localizedDescription)
+        }
     }
 }
