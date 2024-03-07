@@ -8,13 +8,13 @@
 import Foundation
 
 
-class Categories {
+class Tag {
     var name: String
-    var pomodoros: Int
+    var color: String
     
     
-    init(name: String) {
+    init(name: String, color: String) {
         self.name = name
-        self.pomodoros = 0
+        self.color = color
     }
 }

@@ -7,7 +7,7 @@
 import Combine
 import WatchConnectivity
 
-class SessionDelegater: NSObject, WCSessionDelegate {
+class SesssionDelegater: NSObject, WCSessionDelegate {
     let countSubject: PassthroughSubject<Int, Never>
     
     init(countSubject: PassthroughSubject<Int, Never>) {

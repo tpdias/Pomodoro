@@ -9,13 +9,9 @@
 /* Begin PBXBuildFile section */
 		A73737A12B97E40900763044 /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73737A02B97E40900763044 /* WatchConnector.swift */; };
 		A73737A32B97E47100763044 /* WatchToIOSConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73737A22B97E47100763044 /* WatchToIOSConnector.swift */; };
-		A73737A52B97E6F900763044 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73737A42B97E6F900763044 /* Counter.swift */; };
-		A73737A82B97F15C00763044 /* CounterWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73737A72B97F15C00763044 /* CounterWatch.swift */; };
-		A75A8B8B2B8FEF5E00CECAE5 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A8B8A2B8FEF5E00CECAE5 /* Categories.swift */; };
-		A75A8B8D2B8FF13000CECAE5 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A8B8C2B8FF13000CECAE5 /* CategoriesView.swift */; };
+		A75A8B8B2B8FEF5E00CECAE5 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A8B8A2B8FEF5E00CECAE5 /* Tag.swift */; };
 		A78570C52B97C7A500C43847 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78570C42B97C7A500C43847 /* WatchConnectivity.framework */; };
 		A78570D02B97CA8F00C43847 /* PomodoroWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78570CF2B97CA8F00C43847 /* PomodoroWatchApp.swift */; };
-		A78570D22B97CA8F00C43847 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78570D12B97CA8F00C43847 /* ContentView.swift */; };
 		A78570D42B97CA9100C43847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78570D32B97CA9100C43847 /* Assets.xcassets */; };
 		A78570D72B97CA9100C43847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78570D62B97CA9100C43847 /* Preview Assets.xcassets */; };
 		A78570DA2B97CA9100C43847 /* PomodoroWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A78570CD2B97CA8F00C43847 /* PomodoroWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -25,6 +21,17 @@
 		A7B3A5172B8D34FD0025495E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B3A5162B8D34FD0025495E /* Preview Assets.xcassets */; };
 		A7B3A51E2B8D351B0025495E /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3A51D2B8D351B0025495E /* TimerView.swift */; };
 		A7B3A5202B8D3DA10025495E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3A51F2B8D3DA10025495E /* Utils.swift */; };
+		A7BA649E2B98A1CB006DBE72 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA649D2B98A1CB006DBE72 /* OnboardingView.swift */; };
+		A7BA64A12B990B45006DBE72 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA64A02B990B45006DBE72 /* HomeView.swift */; };
+		A7BA64A32B991D7C006DBE72 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA64A22B991D7C006DBE72 /* SettingsView.swift */; };
+		A7BA64A52B991D89006DBE72 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA64A42B991D89006DBE72 /* TagsView.swift */; };
+		A7BA64A82B991EBB006DBE72 /* SettingsSquareComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA64A72B991EBB006DBE72 /* SettingsSquareComponent.swift */; };
+		A7BA64AB2B9A1D75006DBE72 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA64AA2B9A1D75006DBE72 /* Cat.swift */; };
+		A7BA64AD2B9A1DA9006DBE72 /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA64AC2B9A1DA9006DBE72 /* Pomodoro.swift */; };
+		A7BA64D32B9A4B90006DBE72 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA64D22B9A4B90006DBE72 /* Counter.swift */; };
+		A7BA64D42B9A4B90006DBE72 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA64D22B9A4B90006DBE72 /* Counter.swift */; };
+		A7BA64D62B9A4DCF006DBE72 /* WatchTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA64D52B9A4DCF006DBE72 /* WatchTimerView.swift */; };
+		A7BA64D72B9A5D12006DBE72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D5992B926B7300C97719 /* Constants.swift */; };
 		A7D6D5812B925D9E00C97719 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D6D5802B925D9E00C97719 /* WidgetKit.framework */; };
 		A7D6D5832B925D9E00C97719 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D6D5822B925D9E00C97719 /* SwiftUI.framework */; };
 		A7D6D5862B925D9E00C97719 /* widgetextentionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D5852B925D9E00C97719 /* widgetextentionBundle.swift */; };
@@ -82,15 +89,11 @@
 /* Begin PBXFileReference section */
 		A73737A02B97E40900763044 /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 		A73737A22B97E47100763044 /* WatchToIOSConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchToIOSConnector.swift; sourceTree = "<group>"; };
-		A73737A42B97E6F900763044 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
-		A73737A72B97F15C00763044 /* CounterWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterWatch.swift; sourceTree = "<group>"; };
-		A75A8B8A2B8FEF5E00CECAE5 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
-		A75A8B8C2B8FF13000CECAE5 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		A75A8B8A2B8FEF5E00CECAE5 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		A78570C42B97C7A500C43847 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		A78570C62B97C7AE00C43847 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.2.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		A78570CD2B97CA8F00C43847 /* PomodoroWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PomodoroWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78570CF2B97CA8F00C43847 /* PomodoroWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroWatchApp.swift; sourceTree = "<group>"; };
-		A78570D12B97CA8F00C43847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A78570D32B97CA9100C43847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A78570D62B97CA9100C43847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A7B3A50C2B8D34FB0025495E /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +102,15 @@
 		A7B3A5162B8D34FD0025495E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A7B3A51D2B8D351B0025495E /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		A7B3A51F2B8D3DA10025495E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A7BA649D2B98A1CB006DBE72 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A7BA64A02B990B45006DBE72 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A7BA64A22B991D7C006DBE72 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A7BA64A42B991D89006DBE72 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		A7BA64A72B991EBB006DBE72 /* SettingsSquareComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSquareComponent.swift; sourceTree = "<group>"; };
+		A7BA64AA2B9A1D75006DBE72 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		A7BA64AC2B9A1DA9006DBE72 /* Pomodoro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomodoro.swift; sourceTree = "<group>"; };
+		A7BA64D22B9A4B90006DBE72 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		A7BA64D52B9A4DCF006DBE72 /* WatchTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTimerView.swift; sourceTree = "<group>"; };
 		A7D6D57E2B925D9E00C97719 /* widgetextentionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetextentionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D6D5802B925D9E00C97719 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		A7D6D5822B925D9E00C97719 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -147,8 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				A78570CF2B97CA8F00C43847 /* PomodoroWatchApp.swift */,
-				A73737A72B97F15C00763044 /* CounterWatch.swift */,
-				A78570D12B97CA8F00C43847 /* ContentView.swift */,
+				A7BA64D52B9A4DCF006DBE72 /* WatchTimerView.swift */,
 				A78570D32B97CA9100C43847 /* Assets.xcassets */,
 				A78570D52B97CA9100C43847 /* Preview Content */,
 				A73737A22B97E47100763044 /* WatchToIOSConnector.swift */,
@@ -189,14 +200,15 @@
 		A7B3A50E2B8D34FB0025495E /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				A7BA64962B989FD9006DBE72 /* Onboarding */,
+				A7BA64A62B991EA3006DBE72 /* Components */,
+				A7BA649F2B990B09006DBE72 /* Views */,
+				A7BA64A92B9A1C9A006DBE72 /* Model */,
 				A7D6D5972B9269B200C97719 /* Pomodoro.entitlements */,
 				A7B3A50F2B8D34FB0025495E /* PomodoroApp.swift */,
 				A7B3A51F2B8D3DA10025495E /* Utils.swift */,
-				A75A8B8A2B8FEF5E00CECAE5 /* Categories.swift */,
-				A75A8B8C2B8FF13000CECAE5 /* CategoriesView.swift */,
+				A7BA64D22B9A4B90006DBE72 /* Counter.swift */,
 				A7D6D5992B926B7300C97719 /* Constants.swift */,
-				A7B3A51D2B8D351B0025495E /* TimerView.swift */,
-				A73737A42B97E6F900763044 /* Counter.swift */,
 				A73737A02B97E40900763044 /* WatchConnector.swift */,
 				A7B3A5132B8D34FD0025495E /* Assets.xcassets */,
 				A7B3A5152B8D34FD0025495E /* Preview Content */,
@@ -210,6 +222,43 @@
 				A7B3A5162B8D34FD0025495E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A7BA64962B989FD9006DBE72 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A7BA649D2B98A1CB006DBE72 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A7BA649F2B990B09006DBE72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7B3A51D2B8D351B0025495E /* TimerView.swift */,
+				A7BA64A22B991D7C006DBE72 /* SettingsView.swift */,
+				A7BA64A42B991D89006DBE72 /* TagsView.swift */,
+				A7BA64A02B990B45006DBE72 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7BA64A62B991EA3006DBE72 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A7BA64A72B991EBB006DBE72 /* SettingsSquareComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A7BA64A92B9A1C9A006DBE72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A75A8B8A2B8FEF5E00CECAE5 /* Tag.swift */,
+				A7BA64AA2B9A1D75006DBE72 /* Cat.swift */,
+				A7BA64AC2B9A1DA9006DBE72 /* Pomodoro.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A7D6D57F2B925D9E00C97719 /* Frameworks */ = {
@@ -370,10 +419,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A73737A82B97F15C00763044 /* CounterWatch.swift in Sources */,
-				A78570D22B97CA8F00C43847 /* ContentView.swift in Sources */,
+				A7BA64D72B9A5D12006DBE72 /* Constants.swift in Sources */,
+				A7BA64D42B9A4B90006DBE72 /* Counter.swift in Sources */,
 				A73737A32B97E47100763044 /* WatchToIOSConnector.swift in Sources */,
 				A78570D02B97CA8F00C43847 /* PomodoroWatchApp.swift in Sources */,
+				A7BA64D62B9A4DCF006DBE72 /* WatchTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,13 +432,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B3A51E2B8D351B0025495E /* TimerView.swift in Sources */,
-				A75A8B8B2B8FEF5E00CECAE5 /* Categories.swift in Sources */,
+				A75A8B8B2B8FEF5E00CECAE5 /* Tag.swift in Sources */,
 				A73737A12B97E40900763044 /* WatchConnector.swift in Sources */,
-				A73737A52B97E6F900763044 /* Counter.swift in Sources */,
+				A7BA64A12B990B45006DBE72 /* HomeView.swift in Sources */,
 				A7B3A5102B8D34FB0025495E /* PomodoroApp.swift in Sources */,
-				A75A8B8D2B8FF13000CECAE5 /* CategoriesView.swift in Sources */,
+				A7BA64AD2B9A1DA9006DBE72 /* Pomodoro.swift in Sources */,
+				A7BA64D32B9A4B90006DBE72 /* Counter.swift in Sources */,
+				A7BA64AB2B9A1D75006DBE72 /* Cat.swift in Sources */,
 				A7B3A5202B8D3DA10025495E /* Utils.swift in Sources */,
+				A7BA649E2B98A1CB006DBE72 /* OnboardingView.swift in Sources */,
 				A7D6D59A2B926B7300C97719 /* Constants.swift in Sources */,
+				A7BA64A82B991EBB006DBE72 /* SettingsSquareComponent.swift in Sources */,
+				A7BA64A32B991D7C006DBE72 /* SettingsView.swift in Sources */,
+				A7BA64A52B991D89006DBE72 /* TagsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +502,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
@@ -476,7 +532,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
 		};
