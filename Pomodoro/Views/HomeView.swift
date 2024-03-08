@@ -20,7 +20,7 @@ struct HomeView: View {
         self.pomoTime = 25.0
         self.pomoPauseTimer = 5.0
         self.tag = "study"
-        self.tagColor = "Blue"
+        self.tagColor = "BrandBlue"
         self.curCat = "Leo"
     }
     
@@ -29,7 +29,7 @@ struct HomeView: View {
             ZStack {
                 Rectangle()
                     .ignoresSafeArea()
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Color("MainBG"))
                 VStack {
                     Circle()
                         .foregroundColor(.gray)
@@ -37,17 +37,17 @@ struct HomeView: View {
 #warning("colocar fonte do app aqui")
                     Text(String(format: "%02d:%02d", Int(pomoTime) / 60, Int(pomoTime) % 60))
                         .font(Font.custom("NewNord-Extrabold", size: 90))
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("Black2"))
                     HStack{
                         Spacer()
                         Circle()
-                            .foregroundStyle(.blue/*Color(tagColor)*/)
+                            .foregroundStyle(Color(tagColor))
                             .frame(width: 20)
                         Text(tag)
                             .font(Font.custom("NewNord-Bold", size: 28))
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("Gray4"))
                         Image(systemName: "chevron.right")
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("Gray4"))
                         Spacer()
                     }
                     .onTapGesture {

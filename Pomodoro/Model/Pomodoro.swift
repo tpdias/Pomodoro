@@ -14,8 +14,14 @@ class Pomodoro: ObservableObject {
     var session: WCSession
     let delegate: WCSessionDelegate
     let subject = PassthroughSubject<Double, Never>()
+    let inPauseSubject = PassthroughSubject<Bool, Never>()
+    let curSeshSubject = PassthroughSubject<Int, Never>()
+    let pausedSubject = PassthroughSubject<Bool, Never>()
     
     @Published private(set) var timer: Double = 25 * 60
+    @Published private(set) var inPause: Bool = false
+    @Published private(set) var curSesh: Int = 0
+    @Published private(set) var paused: Bool = false
     
     private var cancellables = Set<AnyCancellable>()
 
@@ -26,7 +32,7 @@ class Pomodoro: ObservableObject {
         self.timer = timer
         self.tag = tag
         
-        self.delegate = SessionDelegater(curTimer: subject)
+        self.delegate = SessionDelegater(curTimer: subject, inPauseSubject: inPauseSubject, curSeshSubject: curSeshSubject, pausedSubject: pausedSubject)
                 self.session = session
                 self.session.delegate = self.delegate
                 self.session.activate()
@@ -41,6 +47,24 @@ class Pomodoro: ObservableObject {
                         }
                     })
                     .store(in: &cancellables)
+                inPauseSubject
+                    .receive(on: DispatchQueue.main)
+                    .sink(receiveValue: { newPause in
+                        self.inPause = newPause
+                    })
+                    .store(in: &cancellables)
+                curSeshSubject
+                    .receive(on: DispatchQueue.main)
+                    .sink(receiveValue: { curSesh in
+                        self.curSesh = curSesh
+                    })
+                    .store(in: &cancellables)
+                pausedSubject
+                    .receive(on: DispatchQueue.main)
+                    .sink(receiveValue: { paused in
+                        self.paused = paused
+                    })
+                    .store(in: &cancellables)
     }
     
     func decrement() {
@@ -52,6 +76,30 @@ class Pomodoro: ObservableObject {
     func resetTimer(initialTime: Double) {
         timer = initialTime
         session.sendMessage(["timer": timer], replyHandler: nil) { error in
+            print(error.localizedDescription)
+        }
+    }
+    func togglePause() {
+        if(paused){
+            paused = false
+        } else {
+            paused = true
+        }
+        session.sendMessage(["paused": paused], replyHandler: nil) { error in
+            print(error.localizedDescription)
+        }
+    }
+    func toggleSeshPomo() {
+        curSesh += 1
+        if(inPause) {
+            inPause = false
+        } else {
+            inPause = true
+        }
+        session.sendMessage(["inPause": inPause], replyHandler: nil) { error in
+            print(error.localizedDescription)
+        }
+        session.sendMessage(["curSesh": curSesh], replyHandler: nil) { error in
             print(error.localizedDescription)
         }
     }

@@ -3,7 +3,7 @@ import SwiftUI
 struct TimerView: View {
     @State var pausedTimer: Double
     @State var paused: Bool = false
-    @State var backColor: Color = .green
+    @State var backColor: String = "Primary"
     @State var curSesh: Int = 0
     @State var initialPauseTime: Double = 0
     @State var initialPomoTime: Double = 0
@@ -88,16 +88,18 @@ struct TimerView: View {
     }
     
     func changeSesh() {
+        self.pomodoro.toggleSeshPomo()
         vibrate(with: .light)
         curSesh += 1
         if(curSesh%2 == 0) {
-            backColor = .green
+            backColor = "Primary"
         } else {
-            backColor = .purple
+            backColor = "SecondaryBG"
         }
     }
     
     func changePauseStatus() {
+        self.pomodoro.togglePause()
         vibrate(with: .light)
         textColor = .white
         paused.toggle()
