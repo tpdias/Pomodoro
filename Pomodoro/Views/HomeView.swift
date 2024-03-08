@@ -17,8 +17,8 @@ struct HomeView: View {
     @State var tagSheet: Bool = false
     
     init() {
-        self.pomoTime = 25 * 60.00
-        self.pomoPauseTimer = 5 * 60.00
+        self.pomoTime = 25.0
+        self.pomoPauseTimer = 5.0
         self.tag = "study"
         self.tagColor = "Blue"
         self.curCat = "Leo"
@@ -60,7 +60,7 @@ struct HomeView: View {
                     NavigationLink(destination: TimerView(time: pomoTime, pausedTimer: pomoPauseTimer, cat: curCat), label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 90)
-                                .fill(Color(red: 0.48, green: 0.70, blue: 0.55))
+                                .foregroundStyle(Color("Primary"))
                                 .frame(width: 160, height: 75)
                             Text("Start")
                                 .font(Font.custom("NewNord-Bold", size: 28))

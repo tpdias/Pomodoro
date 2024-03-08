@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A75A8B8B2B8FEF5E00CECAE5 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A8B8A2B8FEF5E00CECAE5 /* Tag.swift */; };
+		A773A8182B9BA8CE00C451EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B3A5132B8D34FD0025495E /* Assets.xcassets */; };
+		A773A8192B9BA8CE00C451EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B3A5132B8D34FD0025495E /* Assets.xcassets */; };
 		A78570C52B97C7A500C43847 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78570C42B97C7A500C43847 /* WatchConnectivity.framework */; };
 		A78570D02B97CA8F00C43847 /* PomodoroWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78570CF2B97CA8F00C43847 /* PomodoroWatchApp.swift */; };
-		A78570D42B97CA9100C43847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78570D32B97CA9100C43847 /* Assets.xcassets */; };
 		A78570D72B97CA9100C43847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78570D62B97CA9100C43847 /* Preview Assets.xcassets */; };
 		A78570DA2B97CA9100C43847 /* PomodoroWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A78570CD2B97CA8F00C43847 /* PomodoroWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A78570DE2B97CAA900C43847 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78570C62B97C7AE00C43847 /* WatchConnectivity.framework */; };
@@ -39,7 +40,6 @@
 		A7D6D5882B925D9E00C97719 /* widgetextentionLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D5872B925D9E00C97719 /* widgetextentionLiveActivity.swift */; };
 		A7D6D58A2B925D9E00C97719 /* widgetextention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D5892B925D9E00C97719 /* widgetextention.swift */; };
 		A7D6D58C2B925D9E00C97719 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D58B2B925D9E00C97719 /* AppIntent.swift */; };
-		A7D6D58E2B925DA000C97719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D6D58D2B925DA000C97719 /* Assets.xcassets */; };
 		A7D6D5922B925DA000C97719 /* widgetextentionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A7D6D57E2B925D9E00C97719 /* widgetextentionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A7D6D59A2B926B7300C97719 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D5992B926B7300C97719 /* Constants.swift */; };
 		A7D6D59C2B926C3B00C97719 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D59B2B926C3B00C97719 /* DataService.swift */; };
@@ -93,7 +93,6 @@
 		A78570C62B97C7AE00C43847 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.2.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		A78570CD2B97CA8F00C43847 /* PomodoroWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PomodoroWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78570CF2B97CA8F00C43847 /* PomodoroWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroWatchApp.swift; sourceTree = "<group>"; };
-		A78570D32B97CA9100C43847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A78570D62B97CA9100C43847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A7B3A50C2B8D34FB0025495E /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B3A50F2B8D34FB0025495E /* PomodoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroApp.swift; sourceTree = "<group>"; };
@@ -118,7 +117,6 @@
 		A7D6D5872B925D9E00C97719 /* widgetextentionLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgetextentionLiveActivity.swift; sourceTree = "<group>"; };
 		A7D6D5892B925D9E00C97719 /* widgetextention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgetextention.swift; sourceTree = "<group>"; };
 		A7D6D58B2B925D9E00C97719 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
-		A7D6D58D2B925DA000C97719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7D6D58F2B925DA000C97719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D6D5972B9269B200C97719 /* Pomodoro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pomodoro.entitlements; sourceTree = "<group>"; };
 		A7D6D5982B926A0000C97719 /* widgetextentionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetextentionExtension.entitlements; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 				A78570CF2B97CA8F00C43847 /* PomodoroWatchApp.swift */,
 				A7BA64D82B9A5F50006DBE72 /* WatchHomeView.swift */,
 				A7BA64D52B9A4DCF006DBE72 /* WatchTimerView.swift */,
-				A78570D32B97CA9100C43847 /* Assets.xcassets */,
 				A78570D52B97CA9100C43847 /* Preview Content */,
 			);
 			path = "PomodoroWatch Watch App";
@@ -279,7 +276,6 @@
 				A7D6D59B2B926C3B00C97719 /* DataService.swift */,
 				A7D6D5892B925D9E00C97719 /* widgetextention.swift */,
 				A7D6D58B2B925D9E00C97719 /* AppIntent.swift */,
-				A7D6D58D2B925DA000C97719 /* Assets.xcassets */,
 				A7D6D58F2B925DA000C97719 /* Info.plist */,
 			);
 			path = widgetextention;
@@ -390,7 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A78570D72B97CA9100C43847 /* Preview Assets.xcassets in Resources */,
-				A78570D42B97CA9100C43847 /* Assets.xcassets in Resources */,
+				A773A8182B9BA8CE00C451EA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7D6D58E2B925DA000C97719 /* Assets.xcassets in Resources */,
+				A773A8192B9BA8CE00C451EA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

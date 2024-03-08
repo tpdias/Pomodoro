@@ -17,7 +17,7 @@ struct WatchTimerView: View {
     var cat: String
     @State var textColor: Color = .white
         
-    @StateObject var pomodoro = Pomodoro(timer: 25.0 * 60, tag: Tag(name: "Study", color: "green"))
+    @StateObject var pomodoro = Pomodoro(timer: 25 * 60.0, tag: Tag(name: "Study", color: "green"))
     
     
     init(time: Double, pausedTimer: Double, cat: String) {

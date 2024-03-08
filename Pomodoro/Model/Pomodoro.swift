@@ -16,9 +16,8 @@ class Pomodoro: ObservableObject {
     let subject = PassthroughSubject<Double, Never>()
     
     @Published private(set) var timer: Double = 25 * 60
-    @Published private(set) var date: Double = Date.timeIntervalSinceReferenceDate.magnitude
     
-    private var cancellables = Set<AnyCancellable>() 
+    private var cancellables = Set<AnyCancellable>()
 
     var tag: Tag
     var id = UUID()
