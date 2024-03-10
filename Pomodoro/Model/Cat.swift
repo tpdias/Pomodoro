@@ -7,12 +7,20 @@
 
 import Foundation
 
+var cats: [Cat] = [
+    Cat(name: "Leo", subtitle: "Big cat", image: "Leo"),
+    Cat(name: "Yumi", subtitle: "Small cat", image: "Leo"),
+    Cat(name: "Josh", subtitle: "Funky cat", image: "Leo"),
+    Cat(name: "Berg", subtitle: "Just a cat", image: "Leo")
+]
 class Cat {
     var name: String
-    var pomodoros: Pomodoro
+    var subtitle: String
+    var image: String
     
-    init(name: String, pomodoros: Pomodoro) {
+    init(name: String, subtitle: String, image: String) {
         self.name = name
-        self.pomodoros = pomodoros
+        self.subtitle = subtitle
+        self.image = image
     }
 }

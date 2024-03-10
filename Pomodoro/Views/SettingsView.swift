@@ -16,9 +16,12 @@ struct SettingsView: View {
             Text("choose how you want to be reminded.")
               .font(Font.custom("NewNord-Regular", size: 17))
               .foregroundColor(Color(red: 0.31, green: 0.31, blue: 0.31))
+            
         }
+        .frame(alignment: .topLeading)
     }
 }
+
 
 #Preview {
     SettingsView()

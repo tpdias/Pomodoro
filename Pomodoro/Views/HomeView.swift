@@ -15,6 +15,7 @@ struct HomeView: View {
     var curCat: String
     @State var settingsSheet: Bool = false
     @State var tagSheet: Bool = false
+    @State var catSheet: Bool = false
     
     init() {
         self.pomoTime = 25.0
@@ -35,6 +36,8 @@ struct HomeView: View {
                         .foregroundColor(.gray)
                         .frame(width: 50.00, height: 50.00)
 #warning("colocar fonte do app aqui")
+                    
+                    //Tag info
                     Text(String(format: "%02d:%02d", Int(pomoTime) / 60, Int(pomoTime) % 60))
                         .font(Font.custom("NewNord-Extrabold", size: 90))
                         .foregroundColor(Color("Black2"))
@@ -54,9 +57,15 @@ struct HomeView: View {
                         self.tagSheet = true
                     }
                     .padding(.horizontal, 10)
+                    
+                    //cat image
                     Image(curCat)
                         .resizable()
                         .frame(width: 290, height: 290)
+                        .onTapGesture {
+                            catSheet = true
+                        }
+                    
                     NavigationLink(destination: TimerView(time: pomoTime, pausedTimer: pomoPauseTimer, cat: curCat), label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 90)
@@ -87,6 +96,9 @@ struct HomeView: View {
         })
         .sheet(isPresented: $tagSheet, content: {
             TagsView()
+        })
+        .sheet(isPresented: $catSheet, content: {
+            ChooseCats()
         })
     }
 }

@@ -85,6 +85,11 @@ struct TimerView: View {
             self.pomodoro.resetTimer(initialTime: initialPomoTime)
             self.initialPauseTime = pausedTimer
         }
+        #warning("mexer depois, nao consigo pelo simulador")
+//        .onChange(of: paused) { pause in
+//            print(pause)
+//            print(paused)
+//        }
     }
     
     func changeSesh() {

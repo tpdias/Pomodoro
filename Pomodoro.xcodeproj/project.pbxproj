@@ -34,6 +34,9 @@
 		A7BA64D92B9A5F50006DBE72 /* WatchHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA64D82B9A5F50006DBE72 /* WatchHomeView.swift */; };
 		A7BA64DC2B9A67FC006DBE72 /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA64AC2B9A1DA9006DBE72 /* Pomodoro.swift */; };
 		A7BA64DD2B9A6818006DBE72 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A8B8A2B8FEF5E00CECAE5 /* Tag.swift */; };
+		A7CECB352B9E31BC00DFDF5A /* ChooseCats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CECB342B9E31BC00DFDF5A /* ChooseCats.swift */; };
+		A7CECB372B9E340D00DFDF5A /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CECB362B9E340D00DFDF5A /* CatView.swift */; };
+		A7CECB392B9E3AC900DFDF5A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CECB382B9E3AC900DFDF5A /* Session.swift */; };
 		A7D6D5812B925D9E00C97719 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D6D5802B925D9E00C97719 /* WidgetKit.framework */; };
 		A7D6D5832B925D9E00C97719 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D6D5822B925D9E00C97719 /* SwiftUI.framework */; };
 		A7D6D5862B925D9E00C97719 /* widgetextentionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D5852B925D9E00C97719 /* widgetextentionBundle.swift */; };
@@ -110,6 +113,9 @@
 		A7BA64D22B9A4B90006DBE72 /* SessionDelegater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegater.swift; sourceTree = "<group>"; };
 		A7BA64D52B9A4DCF006DBE72 /* WatchTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTimerView.swift; sourceTree = "<group>"; };
 		A7BA64D82B9A5F50006DBE72 /* WatchHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHomeView.swift; sourceTree = "<group>"; };
+		A7CECB342B9E31BC00DFDF5A /* ChooseCats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCats.swift; sourceTree = "<group>"; };
+		A7CECB362B9E340D00DFDF5A /* CatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
+		A7CECB382B9E3AC900DFDF5A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		A7D6D57E2B925D9E00C97719 /* widgetextentionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetextentionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D6D5802B925D9E00C97719 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		A7D6D5822B925D9E00C97719 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -232,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				A7B3A51D2B8D351B0025495E /* TimerView.swift */,
+				A7CECB342B9E31BC00DFDF5A /* ChooseCats.swift */,
 				A7BA64A22B991D7C006DBE72 /* SettingsView.swift */,
 				A7BA64A42B991D89006DBE72 /* TagsView.swift */,
 				A7BA64A02B990B45006DBE72 /* HomeView.swift */,
@@ -243,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				A7BA64A72B991EBB006DBE72 /* SettingsSquareComponent.swift */,
+				A7CECB362B9E340D00DFDF5A /* CatView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 			children = (
 				A75A8B8A2B8FEF5E00CECAE5 /* Tag.swift */,
 				A7BA64AA2B9A1D75006DBE72 /* Cat.swift */,
+				A7CECB382B9E3AC900DFDF5A /* Session.swift */,
 				A7BA64AC2B9A1DA9006DBE72 /* Pomodoro.swift */,
 			);
 			path = Model;
@@ -431,6 +440,7 @@
 				A7B3A51E2B8D351B0025495E /* TimerView.swift in Sources */,
 				A75A8B8B2B8FEF5E00CECAE5 /* Tag.swift in Sources */,
 				A7BA64A12B990B45006DBE72 /* HomeView.swift in Sources */,
+				A7CECB352B9E31BC00DFDF5A /* ChooseCats.swift in Sources */,
 				A7B3A5102B8D34FB0025495E /* PomodoroApp.swift in Sources */,
 				A7BA64AD2B9A1DA9006DBE72 /* Pomodoro.swift in Sources */,
 				A7BA64D32B9A4B90006DBE72 /* SessionDelegater.swift in Sources */,
@@ -439,8 +449,10 @@
 				A7BA649E2B98A1CB006DBE72 /* OnboardingView.swift in Sources */,
 				A7D6D59A2B926B7300C97719 /* Constants.swift in Sources */,
 				A7BA64A82B991EBB006DBE72 /* SettingsSquareComponent.swift in Sources */,
+				A7CECB392B9E3AC900DFDF5A /* Session.swift in Sources */,
 				A7BA64A32B991D7C006DBE72 /* SettingsView.swift in Sources */,
 				A7BA64A52B991D89006DBE72 /* TagsView.swift in Sources */,
+				A7CECB372B9E340D00DFDF5A /* CatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
