@@ -7,22 +7,97 @@
 
 import SwiftUI
 
+let alerts = ["vibration", "sound", "notification"]
+let alertsBools = [false, false, false]
+
+let timers = ["study", "break"]
+let timersValue = [25.0 * 60, 5.0 * 60]
+
+let sounds = ["none", "white", "brown", "black", "lofi", "rain", "forest", "wind"]
+
 struct SettingsView: View {
+    @State var curAlerts = [false, false, false]
+    @State var curTimers = [false, false]
+    @State var curSounds = [false, false, false, false, false, false, false, false]
     var body: some View {
-        VStack {
-            Text("Alerts")
-                .font(Font.custom("NewNord-Bold", size: 22))
-                .foregroundStyle(Color(red: 0.48, green: 0.70, blue: 0.55))
-            Text("choose how you want to be reminded.")
-              .font(Font.custom("NewNord-Regular", size: 17))
-              .foregroundColor(Color(red: 0.31, green: 0.31, blue: 0.31))
+            VStack(alignment: .leading, spacing: 20)  {
+                VStack(alignment: .leading, spacing: 16) {
+                    Text("Alerts")
+                        .font(
+                            Font.custom("Noto Sans", size: 22)
+                                .weight(.black)
+                        )
+                        .foregroundColor(Color.Primary)
+                    
+                    Text("choose how you want to be reminded.")
+                        .font(Font.custom("Noto Sans", size: 17))
+                        .foregroundColor(Color.Gray2)
+                    HStack(alignment: .top, spacing: 16)  {
+                        ForEach(0..<alerts.count){ index in
+                            SettingsProperty(optionName: alerts[index], isOn: $curAlerts[index])
+                                .onTapGesture {
+                                    curAlerts[index].toggle()
+                                }
+                        }
+                    }
+                    .padding(0)
+                }
+                .padding(.bottom, 4)
+                
+                VStack(alignment: .leading, spacing: 16) {
+                    Text("Timers")
+                        .font(
+                            Font.custom("Noto Sans", size: 22)
+                                .weight(.black)
+                        )
+                        .foregroundColor(Color.Secondary)
+                    
+                    Text("tap to change the time.")
+                        .font(Font.custom("Noto Sans", size: 17))
+                        .foregroundColor(Color.Gray2)
+                    
+                    
+                    HStack(alignment: .top, spacing: 16) {
+                        ForEach(0..<timers.count) { index in
+                            TimerProperty(optionName: timers[index], isOn: $curTimers[index], time: timersValue[index])
+                                .onTapGesture {
+                                    curTimers[index].toggle()
+                                }
+                        }
+                    }
+                    .padding(0)
+    
+                }
+                
+                VStack (alignment: .leading, spacing: 16) {
+                    Text("Sounds")
+                        .font(
+                        Font.custom("Noto Sans", size: 22)
+                        .weight(.black)
+                        )
+                        .foregroundColor(Color.Gray2)
+                    
+                    Text("choose the sound.")
+                        .font(Font.custom("Noto Sans", size: 17))
+                        .foregroundColor(Color.Gray2)
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4), spacing: 8) {
+                        ForEach(0..<sounds.count) { index in
+                            SettingsSound(optionName: sounds[index], isOn: $curSounds[index])
+                                .onTapGesture {
+                                    curSounds[index].toggle()
+                                }
+                        }
+                    }
+                    .frame(alignment: .top)
+                    .padding(.horizontal, 0)
+                    .padding(.vertical, 8)
+                    
+            }
             
         }
-        .frame(alignment: .topLeading)
+        .padding(.horizontal, 33)
     }
 }
-
-
 #Preview {
     SettingsView()
 }

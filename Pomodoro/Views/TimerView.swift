@@ -1,21 +1,22 @@
 import SwiftUI
 
+
 struct TimerView: View {
-    @State var pausedTimer: Double
-    @State var paused: Bool = false
     @State var backColor: String = "Primary"
-    @State var curSesh: Int = 0
     @State var initialPauseTime: Double = 0
     @State var initialPomoTime: Double = 0
-    var cat: String
+    var cat: Cat
     @State var textColor: Color = .white
     
-    @StateObject var pomodoro = Pomodoro(timer: 25 * 60, tag: Tag(name: "Study", color: "green"))
+    @StateObject var pomodoro = Pomodoro(timer: 25.0, tag: Tag(name: "Study", color: "green"))
+    @StateObject var sharedTimer = SharedTimer()
 
-    init(time: Double, pausedTimer: Double, cat: String) {
+    @State var finished: Bool = false
+    init(time: Double, initialPauseTime: Double, cat: Cat) {
         self.initialPomoTime = time
+        self.initialPauseTime = initialPauseTime
         self.cat = cat
-        self.pausedTimer = pausedTimer
+        
     }
     
     var body: some View {
@@ -30,41 +31,47 @@ struct TimerView: View {
                         
                     VStack {
                         Spacer()
-                        if(curSesh%2 == 1) {
-                            Text(String(format: "%02d:%02d", Int(pausedTimer) / 60, Int(pausedTimer) % 60))
-                                .font(.system(size: 80))
-                                .bold()
-                                .foregroundColor(textColor)
-                        } else {
-                            Text(String(format: "%02d:%02d", Int(pomodoro.timer) / 60, Int(pomodoro.timer) % 60))
-                                .font(.system(size: 80))
-                                .bold()
-                                .foregroundColor(textColor)
-                        }
-                        Image(cat)
+                        Text(String(format: "%02d:%02d", Int(pomodoro.timer) / 60, Int(pomodoro.timer) % 60))
+                            .font(.system(size: 80))
+                            .bold()
+                            .foregroundColor(textColor)
+                        Image(cat.image)
                             .resizable()
                             .frame(width: 300, height: 130)
                         Spacer()
                     }
                 }
                 .onReceive(Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()) { _ in
-                    if !paused {
-                        if(curSesh%2 == 0) {
+                    //notification update
+                    if(NotificationManager.shared.continueSess) {
+                        pomodoro.resetTimer(initialTime: 0)
+                        NotificationManager.shared.continueSess = false
+                        if((pomodoro.curSesh + 1 )%2 == 0) {
+                            NotificationManager.shared.scheduleNotification(time: initialPomoTime)
+                        } else {
+                            NotificationManager.shared.scheduleNotification(time: initialPauseTime)
+                        }
+                    }
+                    if(NotificationManager.shared.finished) {
+                        finished = true
+                        NotificationManager.shared.finished = false
+                    }
+                    if !pomodoro.paused {
+                        if(pomodoro.curSesh%2 == 0) {
                             if pomodoro.timer > 0 {
-                               
-                                pomodoro.decrement()
+                               pomodoro.decrement()
+                            
                             } else {
                                 pomodoro.resetTimer(initialTime: initialPomoTime)
                                 changeSesh()
                             }
                         }
                         else {
-                            if pausedTimer > 0 {
-                                pausedTimer -= 1
+                            if pomodoro.timer > 0 {
+                                pomodoro.decrement()
                             } else {
-                                pausedTimer = initialPauseTime
+                                pomodoro.resetTimer(initialTime: initialPauseTime)
                                 changeSesh()
-                                
                             }
                         }
                     } else {
@@ -82,32 +89,38 @@ struct TimerView: View {
             changePauseStatus()
         }
         .onAppear {
-            self.pomodoro.resetTimer(initialTime: initialPomoTime)
-            self.initialPauseTime = pausedTimer
+           // pomodoro.resetTimer(initialTime: initialPomoTime)
+            NotificationManager.shared.scheduleNotification(time: initialPomoTime)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+                self.pomodoro.syncDevice()
+                if(pomodoro.paused) {
+                    backColor = "SecondaryBG"
+                }
+            }
         }
         #warning("mexer depois, nao consigo pelo simulador")
-//        .onChange(of: paused) { pause in
-//            print(pause)
-//            print(paused)
-//        }
+       
     }
     
     func changeSesh() {
-        self.pomodoro.toggleSeshPomo()
-        vibrate(with: .light)
-        curSesh += 1
-        if(curSesh%2 == 0) {
+        pomodoro.incSesh()
+        if(pomodoro.curSesh%2 == 0) {
             backColor = "Primary"
+            pomodoro.resetTimer(initialTime: initialPomoTime)
         } else {
+            pomodoro.resetTimer(initialTime: initialPauseTime)
             backColor = "SecondaryBG"
         }
+
     }
     
     func changePauseStatus() {
         self.pomodoro.togglePause()
         vibrate(with: .light)
         textColor = .white
-        paused.toggle()
     }
     
 }
+
+
+
