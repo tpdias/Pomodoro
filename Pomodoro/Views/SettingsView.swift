@@ -19,8 +19,29 @@ struct SettingsView: View {
     @State var curAlerts = [false, false, false]
     @State var curTimers = [false, false]
     @State var curSounds = [false, false, false, false, false, false, false, false]
+    @Binding var visibility: Bool
     var body: some View {
+        ScrollView {
             VStack(alignment: .leading, spacing: 20)  {
+                HStack {
+                    Spacer()
+                    
+                        Button(action: {
+                            visibility = false
+                        }, label: {
+                            ZStack {
+                                Image(systemName: "circle.fill")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundStyle(Color.Gray3)
+                                Image(systemName: "xmark.circle.fill")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundStyle(Color.Gray5)
+                            }
+                        })
+                }
+                .padding(.horizontal, 24)
                 VStack(alignment: .leading, spacing: 16) {
                     Text("Alerts")
                         .font(
@@ -66,14 +87,14 @@ struct SettingsView: View {
                         }
                     }
                     .padding(0)
-    
+                    
                 }
                 
                 VStack (alignment: .leading, spacing: 16) {
                     Text("Sounds")
                         .font(
-                        Font.custom("Noto Sans", size: 22)
-                        .weight(.black)
+                            Font.custom("Noto Sans", size: 22)
+                                .weight(.black)
                         )
                         .foregroundColor(Color.Gray2)
                     
@@ -93,12 +114,13 @@ struct SettingsView: View {
                     .padding(.horizontal, 0)
                     .padding(.vertical, 8)
                     
+                }
+                
             }
-            
+            .padding(.horizontal, 33)
         }
-        .padding(.horizontal, 33)
+        .padding(.top, 40)
+
     }
 }
-#Preview {
-    SettingsView()
-}
+

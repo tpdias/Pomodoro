@@ -9,52 +9,69 @@ import SwiftUI
 
 struct ChooseCatsView: View {
     @Binding var selectedCat: Int
+    @Binding var visibility: Bool
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
+        ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                Text("Cat Companions")
-                .font(
-                Font.custom("Noto Sans", size: 22)
-                .weight(.black)
-                )
-                .foregroundColor(Color.Black2)
-
-                Text("choose your focus companion.")
-                .font(Font.custom("Noto Sans", size: 17))
-                .foregroundColor(Color.Gray2)
-            }
-            .padding(0)
-            .padding(.horizontal, 28)
-            
-            HStack(alignment: .top, spacing: 0) {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
-                    ForEach(0..<cats.count) { index in
-                        if(selectedCat == index) {
-                            CatCard(isSelected: true, cat: cats[index])
-                                .frame(width: 170, height: 240)
-                        } else {
-                            CatCard (isSelected: false, cat: cats[index])
-                                .frame(width: 170, height: 240)
-                                .onTapGesture {
-                                    selectedCat = index
-                                }
+                HStack {
+                    Spacer()
+                    
+                        Button(action: {
+                            visibility = false
+                        }, label: {
+                            ZStack {
+                                Image(systemName: "circle.fill")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundStyle(Color.Gray3)
+                                Image(systemName: "xmark.circle.fill")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundStyle(Color.Gray5)
+                            }
+                        })
+                }
+                .padding(.horizontal, 24)
+                
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Cat Companions")
+                        .font(
+                            Font.custom("Noto Sans", size: 22)
+                                .weight(.black)
+                        )
+                        .foregroundColor(Color.Black2)
+                    
+                    Text("choose your focus companion.")
+                        .font(Font.custom("Noto Sans", size: 17))
+                        .foregroundColor(Color.Gray2)
+                }
+                .padding(.bottom, 40)
+                .padding(.horizontal, 28)
+                
+                HStack(alignment: .top, spacing: 0) {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
+                        ForEach(0..<cats.count) { index in
+                            if(selectedCat == index) {
+                                CatCard(isSelected: true, cat: cats[index])
+                                    .frame(width: 170, height: 240)
+                            } else {
+                                CatCard (isSelected: false, cat: cats[index])
+                                    .frame(width: 170, height: 240)
+                                    .onTapGesture {
+                                        selectedCat = index
+                                    }
+                            }
                         }
                     }
+                    
                 }
+                .padding(15)
+                .frame(alignment: .topLeading)
             }
-            .padding(15)
-            .frame(alignment: .topLeading)
+            
         }
-        
-    }
-}
-struct ChooseCatsView_Previews: PreviewProvider {
-    static var previews: some View {
-        // Aqui você pode definir diferentes valores para selectedCat, se necessário
-        let selection = Binding.constant(0)
-        
-        return ChooseCatsView(selectedCat: selection)
+        .padding(.top, 40)
+
     }
 }
 
- 

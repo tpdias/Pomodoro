@@ -108,16 +108,32 @@ struct HomeView: View {
             }
         }
         .sheet(isPresented: $settingsSheet, content: {
-            SettingsView()
-                .background(Color.MainBG)
+            ZStack {
+                Color.MainBG.edgesIgnoringSafeArea(.all)
+                SettingsView(visibility: $settingsSheet)
+                    .presentationDetents([.medium, .large])
+                    .presentationCornerRadius(40)
+                    .presentationDragIndicator(.visible)
+            }
         })
         .sheet(isPresented: $tagSheet, content: {
-            TagsView()
-                .background(Color.MainBG)
+            ZStack {
+                Color.MainBG.edgesIgnoringSafeArea(.all)
+                TagsView(visibility: $tagSheet)
+                    .presentationDetents([.medium, .large])
+                    .presentationCornerRadius(40)
+                    .presentationDragIndicator(.visible)
+            }
         })
         .sheet(isPresented: $catSheet, content: {
-            ChooseCatsView(selectedCat: $selectedCat)
-                .background(Color.MainBG)
+            ZStack {
+                Color.MainBG.edgesIgnoringSafeArea(.all)
+                ChooseCatsView(selectedCat: $selectedCat, visibility: $catSheet)
+                    .presentationDetents([.medium, .large])
+                    .presentationCornerRadius(40)
+                    .presentationDragIndicator(.visible)
+                    
+            }
         })
     }
 }
