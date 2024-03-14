@@ -84,6 +84,7 @@ struct SettingsView: View {
                         ForEach(0..<sounds.count) { index in
                             SettingsSound(optionName: sounds[index], isOn: $curSounds[index])
                                 .onTapGesture {
+                                    curSounds =  Array(repeating: false, count: 8)
                                     curSounds[index].toggle()
                                 }
                         }

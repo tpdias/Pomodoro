@@ -38,9 +38,16 @@ struct HomeView: View {
                         .frame(width: 50.00, height: 50.00)
                     
                     //Tag info
-                    Text(String(format: "%02d:%02d", Int(pomoTime) / 60, Int(pomoTime) % 60))
-                        .font(Font.custom("NewNord-Extrabold", size: 90))
-                        .foregroundColor(Color("Black2"))
+                    HStack(alignment: .center, spacing: 0) {
+                        Text(String(format: "%02d:%02d", Int(pomoTime) / 60, Int(pomoTime) % 60))
+                            .font(Font.custom("Londrina Solid", size: 100))
+                            .kerning(4.8)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color.Black2)
+                    }
+                        .padding(.horizontal, 1)
+                        .padding(.vertical, 0)
+                        .frame(width: 289, height: 108, alignment: .center)
                     HStack{
                         Spacer()
                         Circle()
@@ -57,49 +64,64 @@ struct HomeView: View {
                         self.tagSheet = true
                     }
                     .padding(.horizontal, 10)
-                    
-                    //cat image
-                    Image(cats[selectedCat].image)
-                        .resizable()
-                        .frame(width: 290, height: 290)
-                        .onTapGesture {
-                            catSheet = true
-                        }
-                    
-                    NavigationLink(destination: TimerView(time: pomoTime, initialPauseTime: pomoPauseTimer, cat: cats[selectedCat]), label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 90)
-                                .foregroundStyle(Color("Primary"))
-                                .frame(width: 160, height: 75)
-                            Text("Start")
-                                .font(Font.custom("NewNord-Bold", size: 28))
-                                .foregroundColor(Color(red: 0.96, green: 0.96, blue: 0.96))
-                        }
-                    })
-                    HStack{
-                        Circle()
-                            .foregroundColor(.gray)
-                            .frame(width: 50.00, height: 50.00)
-                        Spacer()
-                        Circle()
-                            .foregroundColor(.gray)
-                            .frame(width: 50.00, height: 50.00)
+                    VStack(alignment: .center, spacing: 24) {
+                        //cat image
+                        Image(cats[selectedCat].image)
+                            .resizable()
+                            .frame(width: 290, height: 290)
                             .onTapGesture {
-                                settingsSheet = true
+                                catSheet = true
                             }
-                    }.padding(.horizontal, 50)
+                        
+                        NavigationLink(destination: TimerView(time: pomoTime, initialPauseTime: pomoPauseTimer, cat: cats[selectedCat]), label: {
+                            HStack(alignment: .center, spacing: 10) {
+                                Text("Start")
+                                    .font(
+                                        Font.custom("Noto Sans", size: 28)
+                                            .weight(.heavy)
+                                    )
+                                    .multilineTextAlignment(.center)
+                                    .foregroundColor(Color.White)
+                                
+                                
+                                
+                            }
+                            .padding(.horizontal, 40)
+                            .padding(.vertical, 13)
+                            .background(Color.Primary)
+                            .cornerRadius(90)
+                        })
+                        HStack{
+                            Circle()
+                                .foregroundColor(.gray)
+                                .frame(width: 50.00, height: 50.00)
+                            Spacer()
+                            Circle()
+                                .foregroundColor(.gray)
+                                .frame(width: 50.00, height: 50.00)
+                                .onTapGesture {
+                                    settingsSheet = true
+                                }
+                        }.padding(.horizontal, 50)
+                    }
                 }
             }
         }
         .sheet(isPresented: $settingsSheet, content: {
             SettingsView()
-                //.presentationDetents([.medium])
+                .background(Color.MainBG)
         })
         .sheet(isPresented: $tagSheet, content: {
             TagsView()
+                .background(Color.MainBG)
         })
         .sheet(isPresented: $catSheet, content: {
             ChooseCatsView(selectedCat: $selectedCat)
+                .background(Color.MainBG)
         })
     }
+}
+
+#Preview {
+    HomeView()
 }

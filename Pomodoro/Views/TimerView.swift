@@ -1,17 +1,19 @@
 import SwiftUI
-
+import UIKit
 
 struct TimerView: View {
-    @State var backColor: String = "Primary"
+    @State var backColor: Color = Color.Primary
     @State var initialPauseTime: Double = 0
     @State var initialPomoTime: Double = 0
     var cat: Cat
     @State var textColor: Color = .white
     
-    @StateObject var pomodoro = Pomodoro(timer: 25.0, tag: Tag(name: "Study", color: "green"))
-    @StateObject var sharedTimer = SharedTimer()
-
+    @StateObject var pomodoro = Pomodoro(timer: 25.0, tag: Tag(name: "Study", color: Color.Primary))
+    
     @State var finished: Bool = false
+    
+    @Environment(\.scenePhase) var scenePhase
+    
     init(time: Double, initialPauseTime: Double, cat: Cat) {
         self.initialPomoTime = time
         self.initialPauseTime = initialPauseTime
@@ -28,7 +30,7 @@ struct TimerView: View {
                 ZStack {
                     Color(backColor)
                         .ignoresSafeArea()
-                        
+                    
                     VStack {
                         Spacer()
                         Text(String(format: "%02d:%02d", Int(pomodoro.timer) / 60, Int(pomodoro.timer) % 60))
@@ -59,8 +61,8 @@ struct TimerView: View {
                     if !pomodoro.paused {
                         if(pomodoro.curSesh%2 == 0) {
                             if pomodoro.timer > 0 {
-                               pomodoro.decrement()
-                            
+                                pomodoro.decrement()
+                                
                             } else {
                                 pomodoro.resetTimer(initialTime: initialPomoTime)
                                 changeSesh()
@@ -89,35 +91,71 @@ struct TimerView: View {
             changePauseStatus()
         }
         .onAppear {
-           // pomodoro.resetTimer(initialTime: initialPomoTime)
+            // pomodoro.resetTimer(initialTime: initialPomoTime)
             NotificationManager.shared.scheduleNotification(time: initialPomoTime)
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
-                self.pomodoro.syncDevice()
-                if(pomodoro.paused) {
-                    backColor = "SecondaryBG"
-                }
+            self.pomodoro.syncDevice()
+            if(pomodoro.curSesh%2 == 1) {
+                backColor = Color.SecondaryBG
+            }
+            if(!pomodoro.paused) {
+                textColor = .white
+                
             }
         }
-        #warning("mexer depois, nao consigo pelo simulador")
-       
+        .onChange(of: scenePhase) { oldPhase, newPhase in
+            if newPhase == .active {
+                if(!pomodoro.paused) {
+                    pomodoro.syncTime()
+                    pomodoro.syncDevice()
+                }
+            } else if newPhase == .inactive {
+                if(!pomodoro.paused) {
+                    saveTime()
+                }
+            } else if newPhase == .background {
+                if(!pomodoro.paused) {
+                    saveTime()
+                }
+            }
+            
+        }
+#warning("mexer depois, nao consigo pelo simulador")
+        
     }
     
     func changeSesh() {
         pomodoro.incSesh()
         if(pomodoro.curSesh%2 == 0) {
-            backColor = "Primary"
+            backColor = Color.Primary
             pomodoro.resetTimer(initialTime: initialPomoTime)
         } else {
             pomodoro.resetTimer(initialTime: initialPauseTime)
-            backColor = "SecondaryBG"
+            backColor = Color.Secondary
         }
-
+        
+    }
+    
+    
+    
+    func saveTime() {
+        let currentDate = Date()
+        
+        // Escrevendo a data atual no UserDefaults
+        let sharedDefaults = UserDefaults(suiteName: appGroup)
+        sharedDefaults?.set(currentDate, forKey: "exitDate")
+        sharedDefaults?.synchronize()
     }
     
     func changePauseStatus() {
-        self.pomodoro.togglePause()
+        
+        pomodoro.togglePause()
         vibrate(with: .light)
         textColor = .white
+        if(pomodoro.paused) {
+            NotificationManager.shared.stopNotification()
+        } else {
+            NotificationManager.shared.scheduleNotification(time: pomodoro.timer)
+        }
     }
     
 }

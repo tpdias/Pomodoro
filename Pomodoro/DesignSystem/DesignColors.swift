@@ -32,4 +32,8 @@ extension Color {
     static let Gray4 = Color("Gray4")
     static let Gray5 = Color("Gray5")
     
+    static let BrandRed = Color("BrandRed")
+    static let BrandBlue = Color("BrandBlue")
+    static let Terciary = Color("Terciary")
+    
 }

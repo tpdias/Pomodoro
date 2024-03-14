@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 class Tag {
     var name: String
-    var color: String
+    var color: Color
     
     
-    init(name: String, color: String) {
+    init(name: String, color: Color) {
         self.name = name
         self.color = color
     }

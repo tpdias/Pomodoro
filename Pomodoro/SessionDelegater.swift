@@ -50,11 +50,13 @@ class SessionDelegater: NSObject, WCSessionDelegate {
     #if os(iOS)
     func sessionDidBecomeInactive(_ session: WCSession) {
         print("\(#function): activationState = \(session.activationState.rawValue)")
+        print("ficou inativo")
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
         // Activate the new session after having switched to a new watch.
         session.activate()
+        print("Desativou")
     }
     
     func sessionWatchStateDidChange(_ session: WCSession) {

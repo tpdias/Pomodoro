@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct WatchTimerView: View {
-    @State var paused: Bool = false
-    @State var backColor: Color = Color("Primary")
+    @State var backColor: Color = Color.Primary
     @State var initialPauseTime: Double = 0
     @State var initialPomoTime: Double = 0
     var cat: String
     @State var textColor: Color = .white
         
-    @StateObject var pomodoro = Pomodoro(timer: 25 * 60.0, tag: Tag(name: "Study", color: "green"))
-    @StateObject var sharedTimer = SharedTimer()
+    @StateObject var pomodoro = Pomodoro(timer: 25.0, tag: Tag(name: "Study", color: Color.Primary))
 
-    
+    @Environment(\.scenePhase) var scenePhase
+
     init(time: Double, initialPauseTime: Double, cat: String) {
         self.initialPomoTime = time
         self.initialPauseTime = initialPauseTime
@@ -56,7 +55,8 @@ struct WatchTimerView: View {
             }
         }
         .onReceive(Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()) { _ in
-            if !paused {
+            
+            if !pomodoro.paused {
                 if(pomodoro.curSesh%2 == 0) {
                     if pomodoro.timer > 0 {
                         pomodoro.decrement()
@@ -83,24 +83,65 @@ struct WatchTimerView: View {
             changePauseStatus()
         }
         .onAppear {
-            pomodoro.resetTimer(initialTime: initialPomoTime)
+            
+                self.pomodoro.syncDevice()
+                if(pomodoro.curSesh%2 == 1) {
+                    backColor = Color.SecondaryBG
+                }
+                if(!pomodoro.paused) {
+                    textColor = .white
+                }
+            
+
+        }
+        .onChange(of: scenePhase) { oldPhase, newPhase in
+            if newPhase == .active {
+                if(!pomodoro.paused) {
+                    pomodoro.syncTime()
+                    pomodoro.syncDevice()
+                }
+            } else if newPhase == .inactive {
+                if(!pomodoro.paused) {
+                    saveTime()
+                }
+            } else if newPhase == .background {
+                if(!pomodoro.paused) {
+                    saveTime()
+                }
+            }
+            
         }
     }
+    func saveTime() {
+        let currentDate = Date()
+        
+        // Escrevendo a data atual no UserDefaults
+        let sharedDefaults = UserDefaults(suiteName: appGroup)
+        sharedDefaults?.set(currentDate, forKey: "exitDate")
+        sharedDefaults?.synchronize()
+    }
+    
+    
     func changeSesh() {
         pomodoro.incSesh()
         if(pomodoro.curSesh%2 == 0) {
-            backColor = Color("Primary")
+            backColor = Color.Primary
             pomodoro.resetTimer(initialTime: initialPomoTime)
         } else {
             pomodoro.resetTimer(initialTime: initialPauseTime)
-            backColor = Color("SecondaryBG")
+            backColor = Color.Secondary
         }
 
     }
     
     func changePauseStatus() {
+        pomodoro.togglePause()
         textColor = .white
-        paused.toggle()
+        if(pomodoro.paused) {
+            NotificationManager.shared.stopNotification()
+        } else {
+            NotificationManager.shared.scheduleNotification(time: pomodoro.timer)
+        }
         
     }
 }

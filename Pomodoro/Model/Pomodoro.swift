@@ -70,7 +70,10 @@ class Pomodoro: ObservableObject {
                     .store(in: &cancellables)
         
         self.syncDevice()
+        
     }
+    
+    
     
     func sendData() {
         let timerData = NSNumber(value: timer)
@@ -87,16 +90,28 @@ class Pomodoro: ObservableObject {
         }
     }
     func togglePause() {
-        if(paused){
-            paused = false
-        } else {
-            paused = true
-        }
+        paused.toggle()
         let pausedData = NSNumber(value: paused)
+        print(pausedData)
         session.sendMessage(["paused": pausedData], replyHandler: nil) { error in
             print(error.localizedDescription)
         }
     }
+    
+    func syncTime() {
+        // Atualize o timer conforme necessário
+        guard let exitDate = UserDefaults.standard.object(forKey: "exitDate") as? Date else {
+                return
+            }
+        
+        // Calcule a diferença entre a data atual e a data de saída do aplicativo
+        let currentDate = Date()
+        let timeInterval = currentDate.timeIntervalSince(exitDate)
+        
+        // Atualize o timer com base no tempo restante
+        self.timer -= timeInterval
+    }
+    
     func syncDevice() {
         print("synching")
         let asyncData = NSNumber(value: askSync)

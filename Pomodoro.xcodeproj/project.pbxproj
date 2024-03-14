@@ -47,6 +47,26 @@
 		A7CECB652BA1CFB500DFDF5A /* DesignColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CECB622BA1CFB300DFDF5A /* DesignColors.swift */; };
 		A7CECB672BA1DF3200DFDF5A /* TimerProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CECB662BA1DF3200DFDF5A /* TimerProperty.swift */; };
 		A7CECB692BA1E2AF00DFDF5A /* SettingsSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CECB682BA1E2AF00DFDF5A /* SettingsSound.swift */; };
+		A7CECB8D2BA2377000DFDF5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CECB8C2BA2377000DFDF5A /* AppDelegate.swift */; };
+		A7CECB912BA250B400DFDF5A /* TagComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CECB902BA250B400DFDF5A /* TagComponent.swift */; };
+		A7CECB932BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB922BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf */; };
+		A7CECB942BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB922BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf */; };
+		A7CECB952BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB922BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf */; };
+		A7CECB9A2BA3623000DFDF5A /* LondrinaSolid-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB962BA3623000DFDF5A /* LondrinaSolid-Black.ttf */; };
+		A7CECB9B2BA3623000DFDF5A /* LondrinaSolid-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB962BA3623000DFDF5A /* LondrinaSolid-Black.ttf */; };
+		A7CECB9C2BA3623000DFDF5A /* LondrinaSolid-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB962BA3623000DFDF5A /* LondrinaSolid-Black.ttf */; };
+		A7CECB9D2BA3623000DFDF5A /* LondrinaSolid-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB972BA3623000DFDF5A /* LondrinaSolid-Regular.ttf */; };
+		A7CECB9E2BA3623000DFDF5A /* LondrinaSolid-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB972BA3623000DFDF5A /* LondrinaSolid-Regular.ttf */; };
+		A7CECB9F2BA3623000DFDF5A /* LondrinaSolid-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB972BA3623000DFDF5A /* LondrinaSolid-Regular.ttf */; };
+		A7CECBA02BA3623000DFDF5A /* LondrinaSolid-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB982BA3623000DFDF5A /* LondrinaSolid-Thin.ttf */; };
+		A7CECBA12BA3623000DFDF5A /* LondrinaSolid-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB982BA3623000DFDF5A /* LondrinaSolid-Thin.ttf */; };
+		A7CECBA22BA3623000DFDF5A /* LondrinaSolid-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB982BA3623000DFDF5A /* LondrinaSolid-Thin.ttf */; };
+		A7CECBA32BA3623000DFDF5A /* LondrinaSolid-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB992BA3623000DFDF5A /* LondrinaSolid-Light.ttf */; };
+		A7CECBA42BA3623000DFDF5A /* LondrinaSolid-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB992BA3623000DFDF5A /* LondrinaSolid-Light.ttf */; };
+		A7CECBA52BA3623000DFDF5A /* LondrinaSolid-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CECB992BA3623000DFDF5A /* LondrinaSolid-Light.ttf */; };
+		A7CECBA82BA365C300DFDF5A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CECBA72BA365C300DFDF5A /* Fonts.swift */; };
+		A7CECBA92BA365C300DFDF5A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CECBA72BA365C300DFDF5A /* Fonts.swift */; };
+		A7CECBAA2BA365C300DFDF5A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CECBA72BA365C300DFDF5A /* Fonts.swift */; };
 		A7D6D5812B925D9E00C97719 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D6D5802B925D9E00C97719 /* WidgetKit.framework */; };
 		A7D6D5832B925D9E00C97719 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D6D5822B925D9E00C97719 /* SwiftUI.framework */; };
 		A7D6D5862B925D9E00C97719 /* widgetextentionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D5852B925D9E00C97719 /* widgetextentionBundle.swift */; };
@@ -133,6 +153,15 @@
 		A7CECB622BA1CFB300DFDF5A /* DesignColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignColors.swift; sourceTree = "<group>"; };
 		A7CECB662BA1DF3200DFDF5A /* TimerProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProperty.swift; sourceTree = "<group>"; };
 		A7CECB682BA1E2AF00DFDF5A /* SettingsSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSound.swift; sourceTree = "<group>"; };
+		A7CECB8C2BA2377000DFDF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A7CECB902BA250B400DFDF5A /* TagComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagComponent.swift; sourceTree = "<group>"; };
+		A7CECB922BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
+		A7CECB962BA3623000DFDF5A /* LondrinaSolid-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Black.ttf"; sourceTree = "<group>"; };
+		A7CECB972BA3623000DFDF5A /* LondrinaSolid-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Regular.ttf"; sourceTree = "<group>"; };
+		A7CECB982BA3623000DFDF5A /* LondrinaSolid-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Thin.ttf"; sourceTree = "<group>"; };
+		A7CECB992BA3623000DFDF5A /* LondrinaSolid-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Light.ttf"; sourceTree = "<group>"; };
+		A7CECBA62BA3653C00DFDF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A7CECBA72BA365C300DFDF5A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		A7D6D57E2B925D9E00C97719 /* widgetextentionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetextentionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D6D5802B925D9E00C97719 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		A7D6D5822B925D9E00C97719 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -221,6 +250,7 @@
 		A7B3A50E2B8D34FB0025495E /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				A7CECBA62BA3653C00DFDF5A /* Info.plist */,
 				A7BA64962B989FD9006DBE72 /* Onboarding */,
 				A7BA64A62B991EA3006DBE72 /* Components */,
 				A7BA649F2B990B09006DBE72 /* Views */,
@@ -230,6 +260,7 @@
 				A7B3A50F2B8D34FB0025495E /* PomodoroApp.swift */,
 				A7B3A51F2B8D3DA10025495E /* Utils.swift */,
 				A7CECB3E2B9F8F8800DFDF5A /* NotificationManager.swift */,
+				A7CECB8C2BA2377000DFDF5A /* AppDelegate.swift */,
 				A7CECB3B2B9F64AB00DFDF5A /* SharedTimer.swift */,
 				A7BA64D22B9A4B90006DBE72 /* SessionDelegater.swift */,
 				A7D6D5992B926B7300C97719 /* Constants.swift */,
@@ -274,6 +305,7 @@
 				A7CECB362B9E340D00DFDF5A /* CatCard.swift */,
 				A7CECB412B9FCF3100DFDF5A /* SettingsProperty.swift */,
 				A7CECB662BA1DF3200DFDF5A /* TimerProperty.swift */,
+				A7CECB902BA250B400DFDF5A /* TagComponent.swift */,
 				A7CECB682BA1E2AF00DFDF5A /* SettingsSound.swift */,
 			);
 			path = Components;
@@ -293,7 +325,13 @@
 		A7CECB5B2BA1CE0500DFDF5A /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				A7CECB922BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf */,
+				A7CECB962BA3623000DFDF5A /* LondrinaSolid-Black.ttf */,
+				A7CECB992BA3623000DFDF5A /* LondrinaSolid-Light.ttf */,
+				A7CECB972BA3623000DFDF5A /* LondrinaSolid-Regular.ttf */,
+				A7CECB982BA3623000DFDF5A /* LondrinaSolid-Thin.ttf */,
 				A7CECB622BA1CFB300DFDF5A /* DesignColors.swift */,
+				A7CECBA72BA365C300DFDF5A /* Fonts.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -426,8 +464,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7CECB9F2BA3623000DFDF5A /* LondrinaSolid-Regular.ttf in Resources */,
+				A7CECBA52BA3623000DFDF5A /* LondrinaSolid-Light.ttf in Resources */,
 				A78570D72B97CA9100C43847 /* Preview Assets.xcassets in Resources */,
+				A7CECBA22BA3623000DFDF5A /* LondrinaSolid-Thin.ttf in Resources */,
 				A773A8182B9BA8CE00C451EA /* Assets.xcassets in Resources */,
+				A7CECB952BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf in Resources */,
+				A7CECB9C2BA3623000DFDF5A /* LondrinaSolid-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,8 +478,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7CECB9D2BA3623000DFDF5A /* LondrinaSolid-Regular.ttf in Resources */,
+				A7CECBA32BA3623000DFDF5A /* LondrinaSolid-Light.ttf in Resources */,
 				A7B3A5172B8D34FD0025495E /* Preview Assets.xcassets in Resources */,
+				A7CECBA02BA3623000DFDF5A /* LondrinaSolid-Thin.ttf in Resources */,
 				A7B3A5142B8D34FD0025495E /* Assets.xcassets in Resources */,
+				A7CECB932BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf in Resources */,
+				A7CECB9A2BA3623000DFDF5A /* LondrinaSolid-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +492,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7CECBA42BA3623000DFDF5A /* LondrinaSolid-Light.ttf in Resources */,
+				A7CECB942BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf in Resources */,
+				A7CECB9B2BA3623000DFDF5A /* LondrinaSolid-Black.ttf in Resources */,
+				A7CECB9E2BA3623000DFDF5A /* LondrinaSolid-Regular.ttf in Resources */,
 				A773A8192B9BA8CE00C451EA /* Assets.xcassets in Resources */,
+				A7CECBA12BA3623000DFDF5A /* LondrinaSolid-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +516,7 @@
 				A7CECB3D2B9F64B000DFDF5A /* SharedTimer.swift in Sources */,
 				A78570D02B97CA8F00C43847 /* PomodoroWatchApp.swift in Sources */,
 				A7CECB652BA1CFB500DFDF5A /* DesignColors.swift in Sources */,
+				A7CECBAA2BA365C300DFDF5A /* Fonts.swift in Sources */,
 				A7BA64DC2B9A67FC006DBE72 /* Pomodoro.swift in Sources */,
 				A7BA64D62B9A4DCF006DBE72 /* WatchTimerView.swift in Sources */,
 			);
@@ -472,11 +526,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7CECB912BA250B400DFDF5A /* TagComponent.swift in Sources */,
 				A7B3A51E2B8D351B0025495E /* TimerView.swift in Sources */,
 				A75A8B8B2B8FEF5E00CECAE5 /* Tag.swift in Sources */,
 				A7BA64A12B990B45006DBE72 /* HomeView.swift in Sources */,
 				A7CECB352B9E31BC00DFDF5A /* ChooseCatsView.swift in Sources */,
 				A7B3A5102B8D34FB0025495E /* PomodoroApp.swift in Sources */,
+				A7CECBA82BA365C300DFDF5A /* Fonts.swift in Sources */,
 				A7BA64AD2B9A1DA9006DBE72 /* Pomodoro.swift in Sources */,
 				A7CECB3C2B9F64AB00DFDF5A /* SharedTimer.swift in Sources */,
 				A7BA64D32B9A4B90006DBE72 /* SessionDelegater.swift in Sources */,
@@ -494,6 +550,7 @@
 				A7CECB632BA1CFB300DFDF5A /* DesignColors.swift in Sources */,
 				A7BA64A52B991D89006DBE72 /* TagsView.swift in Sources */,
 				A7CECB372B9E340D00DFDF5A /* CatCard.swift in Sources */,
+				A7CECB8D2BA2377000DFDF5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7CECBA92BA365C300DFDF5A /* Fonts.swift in Sources */,
 				A7D6D5862B925D9E00C97719 /* widgetextentionBundle.swift in Sources */,
 				A7D6D58C2B925D9E00C97719 /* AppIntent.swift in Sources */,
 				A7D6D58A2B925D9E00C97719 /* widgetextention.swift in Sources */,
@@ -720,11 +778,12 @@
 				DEVELOPMENT_TEAM = DFJUFQ6A3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pomodoro/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -751,11 +810,12 @@
 				DEVELOPMENT_TEAM = DFJUFQ6A3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pomodoro/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

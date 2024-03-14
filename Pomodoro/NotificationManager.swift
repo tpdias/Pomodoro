@@ -84,4 +84,8 @@ class NotificationManager: NSObject, ObservableObject, UNUserNotificationCenterD
         
         completionHandler()
     }
+    
+    func stopNotification() {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["pomodoroCategory"])
+    }
 }
