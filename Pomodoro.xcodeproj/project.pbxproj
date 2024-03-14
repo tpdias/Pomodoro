@@ -205,6 +205,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5CBBBE92BA366B700EFB8A8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A7CECB922BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf */,
+				A7CECB962BA3623000DFDF5A /* LondrinaSolid-Black.ttf */,
+				A7CECB992BA3623000DFDF5A /* LondrinaSolid-Light.ttf */,
+				A7CECB972BA3623000DFDF5A /* LondrinaSolid-Regular.ttf */,
+				A7CECB982BA3623000DFDF5A /* LondrinaSolid-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		A78570CE2B97CA8F00C43847 /* PomodoroWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,11 +337,7 @@
 		A7CECB5B2BA1CE0500DFDF5A /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				A7CECB922BA3617700DFDF5A /* NotoSans-VariableFont_wdth,wght.ttf */,
-				A7CECB962BA3623000DFDF5A /* LondrinaSolid-Black.ttf */,
-				A7CECB992BA3623000DFDF5A /* LondrinaSolid-Light.ttf */,
-				A7CECB972BA3623000DFDF5A /* LondrinaSolid-Regular.ttf */,
-				A7CECB982BA3623000DFDF5A /* LondrinaSolid-Thin.ttf */,
+				A5CBBBE92BA366B700EFB8A8 /* Fonts */,
 				A7CECB622BA1CFB300DFDF5A /* DesignColors.swift */,
 				A7CECBA72BA365C300DFDF5A /* Fonts.swift */,
 			);
