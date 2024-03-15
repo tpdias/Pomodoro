@@ -16,7 +16,7 @@ struct HomeView: View {
     @State var settingsSheet: Bool = false
     @State var tagSheet: Bool = false
     @State var catSheet: Bool = false
-        
+    
     init() {
         self.selectedCat = 0
         self.pomoTime = 25.0
@@ -39,15 +39,17 @@ struct HomeView: View {
                     
                     //Tag info
                     HStack(alignment: .center, spacing: 0) {
-                        Text(String(format: "%02d:%02d", Int(pomoTime) / 60, Int(pomoTime) % 60))
-                            .font(Font.custom("Londrina Solid", size: 100))
-                            .kerning(4.8)
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(Color.Black2)
+                        NavigationLink(destination: SettingsTimerView()) {
+                            Text(String(format: "%02d:%02d", Int(pomoTime) / 60, Int(pomoTime) % 60))
+                                .font(Font.custom("Londrina Solid", size: 100))
+                                .kerning(4.8)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(Color.Black2)
+                        }
                     }
-                        .padding(.horizontal, 1)
-                        .padding(.vertical, 0)
-                        .frame(width: 289, height: 108, alignment: .center)
+                    .padding(.horizontal, 1)
+                    .padding(.vertical, 0)
+                    .frame(width: 289, height: 108, alignment: .center)
                     HStack{
                         Spacer()
                         Circle()
@@ -107,6 +109,7 @@ struct HomeView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden()
         .sheet(isPresented: $settingsSheet, content: {
             ZStack {
                 Color.MainBG.edgesIgnoringSafeArea(.all)
@@ -135,7 +138,7 @@ struct HomeView: View {
                     .presentationCornerRadius(40)
                     .presentationDragIndicator(.visible)
                     .ignoresSafeArea()
-                    
+                
             }
         })
     }
