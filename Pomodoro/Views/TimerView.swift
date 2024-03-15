@@ -19,6 +19,8 @@ struct TimerView: View {
         self.initialPauseTime = initialPauseTime
         self.cat = cat
         
+        saveTime()
+        
     }
     
     var body: some View {
@@ -102,19 +104,20 @@ struct TimerView: View {
                 
             }
         }
+        .onChange(of: pomodoro.paused, perform: { newPause in
+            print("switching")
+            if(pomodoro.curSesh%2 == 1) {
+                backColor = Color.SecondaryBG
+            }
+            if(!newPause) {
+                textColor = Color.White
+                
+            }
+        })
         .onChange(of: scenePhase) { oldPhase, newPhase in
             if newPhase == .active {
                 if(!pomodoro.paused) {
                     pomodoro.syncTime()
-                    pomodoro.syncDevice()
-                }
-            } else if newPhase == .inactive {
-                if(!pomodoro.paused) {
-                    saveTime()
-                }
-            } else if newPhase == .background {
-                if(!pomodoro.paused) {
-                    saveTime()
                 }
             }
             
@@ -142,9 +145,19 @@ struct TimerView: View {
         
         // Escrevendo a data atual no UserDefaults
         let sharedDefaults = UserDefaults(suiteName: appGroup)
-        sharedDefaults?.set(currentDate, forKey: "exitDate")
+        sharedDefaults?.set(currentDate, forKey: "begginDate")
         sharedDefaults?.synchronize()
     }
+    
+    func savePauseTime() {
+        let currentDate = Date()
+        
+        // Escrevendo a data atual no UserDefaults
+        let sharedDefaults = UserDefaults(suiteName: appGroup)
+        sharedDefaults?.set(currentDate, forKey: "begginPause")
+        sharedDefaults?.synchronize()
+    }
+    
     
     func changePauseStatus() {
         
@@ -155,6 +168,17 @@ struct TimerView: View {
             NotificationManager.shared.stopNotification()
         } else {
             NotificationManager.shared.scheduleNotification(time: pomodoro.timer)
+            let sharedDefaults = UserDefaults(suiteName: appGroup)
+                   guard let beginDate = sharedDefaults?.object(forKey: "beginDate") as? Date else {
+                       return
+                   }
+                   let newBeginDate = Date().addingTimeInterval(pomodoro.timer + (initialPomoTime - pomodoro.timer))
+                   
+                   // Atualiza o tempo de início nos UserDefaults
+                   sharedDefaults?.set(newBeginDate, forKey: "beginDate")
+                   sharedDefaults?.synchronize()
+                   
+                 
         }
     }
     

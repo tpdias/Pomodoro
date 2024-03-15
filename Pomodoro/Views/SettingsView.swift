@@ -51,7 +51,7 @@ struct SettingsView: View {
                         .foregroundColor(Color.Primary)
                     
                     Text("choose how you want to be reminded.")
-                        .font(Font.custom("Noto Sans", size: 17))
+                        .font(Font.headline)
                         .foregroundColor(Color.Gray2)
                     HStack(alignment: .top, spacing: 16)  {
                         ForEach(0..<alerts.count){ index in
@@ -114,12 +114,14 @@ struct SettingsView: View {
                     .padding(.horizontal, 0)
                     .padding(.vertical, 8)
                     
-                }
+                } 
                 
             }
-            .padding(.horizontal, 33)
+            .padding(.horizontal, 32)
         }
+        .ignoresSafeArea()
         .padding(.top, 40)
+
 
     }
 }

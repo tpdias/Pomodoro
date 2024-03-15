@@ -76,6 +76,7 @@
 		A7D6D5922B925DA000C97719 /* widgetextentionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A7D6D57E2B925D9E00C97719 /* widgetextentionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A7D6D59A2B926B7300C97719 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D5992B926B7300C97719 /* Constants.swift */; };
 		A7D6D59C2B926C3B00C97719 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D59B2B926C3B00C97719 /* DataService.swift */; };
+		A7D776442BA3A7D000C7A6BD /* NewTagComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D776432BA3A7D000C7A6BD /* NewTagComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +175,7 @@
 		A7D6D5982B926A0000C97719 /* widgetextentionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetextentionExtension.entitlements; sourceTree = "<group>"; };
 		A7D6D5992B926B7300C97719 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A7D6D59B2B926C3B00C97719 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		A7D776432BA3A7D000C7A6BD /* NewTagComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTagComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 				A7CECB412B9FCF3100DFDF5A /* SettingsProperty.swift */,
 				A7CECB662BA1DF3200DFDF5A /* TimerProperty.swift */,
 				A7CECB902BA250B400DFDF5A /* TagComponent.swift */,
+				A7D776432BA3A7D000C7A6BD /* NewTagComponent.swift */,
 				A7CECB682BA1E2AF00DFDF5A /* SettingsSound.swift */,
 			);
 			path = Components;
@@ -553,6 +556,7 @@
 				A7CECB3F2B9F8F8800DFDF5A /* NotificationManager.swift in Sources */,
 				A7BA64A82B991EBB006DBE72 /* SettingsSquareComponent.swift in Sources */,
 				A7CECB392B9E3AC900DFDF5A /* Session.swift in Sources */,
+				A7D776442BA3A7D000C7A6BD /* NewTagComponent.swift in Sources */,
 				A7CECB422B9FCF3100DFDF5A /* SettingsProperty.swift in Sources */,
 				A7BA64A32B991D7C006DBE72 /* SettingsView.swift in Sources */,
 				A7CECB632BA1CFB300DFDF5A /* DesignColors.swift in Sources */,

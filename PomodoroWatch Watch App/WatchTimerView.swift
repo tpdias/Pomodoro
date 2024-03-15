@@ -22,6 +22,7 @@ struct WatchTimerView: View {
         self.initialPomoTime = time
         self.initialPauseTime = initialPauseTime
         self.cat = cat
+       
     }
     
     
@@ -83,7 +84,7 @@ struct WatchTimerView: View {
             changePauseStatus()
         }
         .onAppear {
-            
+                self.pomodoro.startWatch()
                 self.pomodoro.syncDevice()
                 if(pomodoro.curSesh%2 == 1) {
                     backColor = Color.SecondaryBG
@@ -91,9 +92,17 @@ struct WatchTimerView: View {
                 if(!pomodoro.paused) {
                     textColor = .white
                 }
-            
 
         }
+        .onChange(of: pomodoro.paused, perform: { newPause in
+            if(pomodoro.curSesh%2 == 1) {
+                backColor = Color.SecondaryBG
+            }
+            if(!newPause) {
+                textColor = Color.White
+                
+            }
+        })
         .onChange(of: scenePhase) { oldPhase, newPhase in
             if newPhase == .active {
                 if(!pomodoro.paused) {

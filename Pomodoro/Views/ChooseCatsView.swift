@@ -70,6 +70,7 @@ struct ChooseCatsView: View {
             }
             
         }
+        .ignoresSafeArea()
         .padding(.top, 40)
 
     }

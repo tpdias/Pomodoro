@@ -114,6 +114,7 @@ struct HomeView: View {
                     .presentationDetents([.medium, .large])
                     .presentationCornerRadius(40)
                     .presentationDragIndicator(.visible)
+                    .ignoresSafeArea()
             }
         })
         .sheet(isPresented: $tagSheet, content: {
@@ -123,6 +124,7 @@ struct HomeView: View {
                     .presentationDetents([.medium, .large])
                     .presentationCornerRadius(40)
                     .presentationDragIndicator(.visible)
+                    .ignoresSafeArea()
             }
         })
         .sheet(isPresented: $catSheet, content: {
@@ -132,6 +134,7 @@ struct HomeView: View {
                     .presentationDetents([.medium, .large])
                     .presentationCornerRadius(40)
                     .presentationDragIndicator(.visible)
+                    .ignoresSafeArea()
                     
             }
         })

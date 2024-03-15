@@ -18,6 +18,9 @@ struct TagsView: View {
     @State var currentTag = 0
     @State var selectedTag = -1
     @Binding var visibility: Bool
+    @State var showingAlert = false
+    @State private var name = ""
+    @State var showingDeleteAlert = false
     var body: some View {
         ScrollView {
             VStack (alignment: .leading, spacing: 32){
@@ -53,7 +56,7 @@ struct TagsView: View {
                         let tag = curTags[index]
                         let isSelected = index == selectedTag
                         let isOn = index == currentTag
-                        TagComponent(name: tag.name, color: tag.color, isOn: isOn, isSelected: isSelected)
+                        TagComponent(name: tag.name, color: tag.color, isOn: isOn, isSelected: isSelected, showingDeleteAlert: $showingDeleteAlert)
                             .onTapGesture {
                                 currentTag = index
                                 selectedTag = -1
@@ -62,15 +65,33 @@ struct TagsView: View {
                                 selectedTag = index
                             }
                     }
+                    NewTagComponent()
+                        .onTapGesture {
+                            showingAlert = true
+                        }
                     
                 }
                 .padding(0)
                 .frame(width: 337, alignment: .topLeading)
-                
             }
             .ignoresSafeArea()
             .padding(.top, 40)
+            .padding(.horizontal, 32)
+
         }
+        .alert("Create a new Tag", isPresented: $showingAlert, actions: {
+                    TextField("Name", text: $name)
+                    
+                    Button("Create", action: {
+                        print(name)
+                    })
+                    Button("Cancel", role: .cancel, action: {})
+                }, message: {
+                    Text("Write the name of the activity you will focus on.")
+                })
+        .alert(isPresented: $showingDeleteAlert, content: {
+            Alert(title: Text("Delete Tag"), message: Text("Are you sure you want to delete this tag? Removing it will also delete associated data"), primaryButton: .destructive(Text("Delete")), secondaryButton: .cancel())
+        })
     }
 }
 

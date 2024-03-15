@@ -12,12 +12,13 @@ struct TagComponent: View {
     var color: Color
     var isOn: Bool
     var isSelected: Bool
+    @Binding var showingDeleteAlert: Bool
     var body: some View {
         ZStack {
             Rectangle()
                 .foregroundColor(.clear)
                 .frame(width: 160, height: 80)
-                .background(isOn ? Color.Primary : Color.White)
+                .background(isOn ? color : Color.White)
                 .cornerRadius(90)
             HStack(alignment: .center, spacing: 12) {
                 ZStack {
@@ -34,26 +35,36 @@ struct TagComponent: View {
                                 .weight(.semibold)
                         )
                         .multilineTextAlignment(.center)
-                        .foregroundColor(isOn ? Color.White : Color.Black3)
+                        .foregroundColor(isOn ? Color.MainBG : Color.Black3)
                 }
             }
             if(isSelected) {
                 HStack {
                     Spacer()
                     VStack{
-                        Image(systemName: "minus.circle.fill")
-                            .resizable()
-                            .frame(width: 25, height: 25)
-                            .foregroundStyle(Color.BrandRed)
+                        ZStack {
+                            
+                          
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundStyle(Color.White)
+                            
+                            Image(systemName: "minus.circle.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundStyle(Color.BrandRed)
+                                .onTapGesture {
+                                    showingDeleteAlert = true
+                                }
+                        }
+                        
                         Spacer()
+                            
                     }
                 }
             }
         }
         .frame(width: 160, height: 80)
     }
-}
-
-#Preview {
-    TagComponent(name: "focus", color: Color.Primary, isOn: false, isSelected: false)
 }

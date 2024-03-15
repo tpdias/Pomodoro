@@ -97,10 +97,12 @@ class Pomodoro: ObservableObject {
             print(error.localizedDescription)
         }
     }
-    
+    func startWatch() {
+        paused = true
+    }
     func syncTime() {
         // Atualize o timer conforme necessário
-        guard let exitDate = UserDefaults.standard.object(forKey: "exitDate") as? Date else {
+        guard let exitDate = UserDefaults.standard.object(forKey: "begginDate") as? Date else {
                 return
             }
         
@@ -128,40 +130,5 @@ class Pomodoro: ObservableObject {
     func incSesh() {
         curSesh += 1
     }
-//    func decrement() {
-//        timer -= 1
-//        session.sendMessage(["timer": timer], replyHandler: nil) { error in
-//            print(error.localizedDescription)
-//        }
-//        let sharedDefaults = UserDefaults(suiteName: appGroup)
-//               sharedDefaults?.set(timer, forKey: "timer")
-//               sharedDefaults?.synchronize()
-//               
-//               // Envie uma mensagem para a sessão do WatchConnectivity (se necessário)
-//               session.sendMessage(["timer": timer], replyHandler: nil) { error in
-//                   print(error.localizedDescription)
-//               }
-//    }
-    
-//    func resetTimer(initialTime: Double) {
-//        timer = initialTime
-//        session.sendMessage(["timer": timer], replyHandler: nil) { error in
-//            print(error.localizedDescription)
-//        }
-//    }
- 
-//    func toggleSeshPomo() {
-//        curSesh += 1
-//        if(inPause) {
-//            inPause = false
-//        } else {
-//            inPause = true
-//        }
-//        session.sendMessage(["inPause": inPause], replyHandler: nil) { error in
-//            print(error.localizedDescription)
-//        }
-//        session.sendMessage(["curSesh": curSesh], replyHandler: nil) { error in
-//            print(error.localizedDescription)
-//        }
-//    }
+
 }
