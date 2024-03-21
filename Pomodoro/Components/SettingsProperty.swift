@@ -18,15 +18,19 @@ struct SettingsProperty: View {
                 .frame(width: 100, height: 100)
                 .background(isOn ? Color.Primary : Color.Gray5)
                 .cornerRadius(30)
-                VStack {
-                    Spacer()
-                    Text(optionName)
-                        .font(Font.custom("Noto Sans", size: 13))
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(isOn ? Color.MainBG: Color.Black2)
-                        .frame(width: 100, alignment: .top)
-                }
-                .padding(.vertical, 7)
+            Image(isOn ? optionName.appending("Selected") : optionName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 60, height: 60)
+            VStack {
+                Spacer()
+                Text(optionName)
+                    .font(Font.custom("Noto Sans", size: 13))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(isOn ? Color.MainBG: Color.Black2)
+                    .frame(width: 100, alignment: .top)
+            }
+            .padding(.vertical, 7)
             
         }
         .frame(width: 100, height: 100)

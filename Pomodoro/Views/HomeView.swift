@@ -16,6 +16,8 @@ struct HomeView: View {
     @State var settingsSheet: Bool = false
     @State var tagSheet: Bool = false
     @State var catSheet: Bool = false
+    @State var travelToPomoTimer: Bool = false
+    @State var travelToPauseTimer: Bool = false
     
     init() {
         self.selectedCat = 0
@@ -39,13 +41,13 @@ struct HomeView: View {
                     
                     //Tag info
                     HStack(alignment: .center, spacing: 0) {
-                        NavigationLink(destination: SettingsTimerView()) {
-                            Text(String(format: "%02d:%02d", Int(pomoTime) / 60, Int(pomoTime) % 60))
-                                .font(Font.custom("Londrina Solid", size: 100))
-                                .kerning(4.8)
-                                .multilineTextAlignment(.center)
-                                .foregroundColor(Color.Black2)
-                        }
+                        
+                        Text(String(format: "%02d:%02d", Int(pomoTime) / 60, Int(pomoTime) % 60))
+                            .font(Font.custom("Londrina Solid", size: 100))
+                            .kerning(4.8)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color.Black2)
+                        
                     }
                     .padding(.horizontal, 1)
                     .padding(.vertical, 0)
@@ -108,12 +110,26 @@ struct HomeView: View {
                     }
                 }
             }
+            .background(
+                NavigationLink(
+                    destination: SettingsTimerView(time: pomoTime, color: Color.Primary, name: "Break"),
+                    isActive: $travelToPomoTimer,
+                    label: { EmptyView() }
+                )
+            )
+            .background(
+                NavigationLink(
+                    destination: SettingsTimerView(time: pomoPauseTimer, color: Color.SecondaryBG, name: "Study"),
+                    isActive: $travelToPauseTimer,
+                    label: { EmptyView() }
+                )
+            )
         }
         .navigationBarBackButtonHidden()
         .sheet(isPresented: $settingsSheet, content: {
             ZStack {
                 Color.MainBG.edgesIgnoringSafeArea(.all)
-                SettingsView(visibility: $settingsSheet)
+                SettingsView(visibility: $settingsSheet, travelToPomoTimer: $travelToPomoTimer, travelToPauseTimer: $travelToPauseTimer)
                     .presentationDetents([.medium, .large])
                     .presentationCornerRadius(40)
                     .presentationDragIndicator(.visible)
@@ -141,6 +157,7 @@ struct HomeView: View {
                 
             }
         })
+        
     }
 }
 

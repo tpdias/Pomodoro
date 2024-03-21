@@ -23,8 +23,7 @@ struct TimerProperty: View {
                     Spacer()
                     Text(String(format: "%02d:%02d", Int(time) / 60, Int(time) % 60))
                         .font(
-                        Font.custom("Londrina Solid", size: 24)
-                        .weight(.light)
+                        Font.timerButton()
                         )
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color.Black3)

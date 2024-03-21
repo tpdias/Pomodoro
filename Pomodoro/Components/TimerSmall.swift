@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TimerSmall: View {
-    @State var time: Double
+    @Binding var time: Double
     @Binding var color: Color
     var body: some View {
         HStack(alignment: .center, spacing: 0) {
@@ -17,6 +17,8 @@ struct TimerSmall: View {
                 .kerning(3.2)
                 .multilineTextAlignment(.center)
                 .foregroundColor(color)
+                .contentTransition(.numericText(value: time))
+                .animation(.snappy, value: time)
         }
         .padding(.leading, 0)
         .padding(.trailing, 1)

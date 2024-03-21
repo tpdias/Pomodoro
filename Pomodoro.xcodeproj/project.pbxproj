@@ -80,6 +80,8 @@
 		A7D776462BA4698D00C7A6BD /* SettingsTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D776452BA4698D00C7A6BD /* SettingsTimerView.swift */; };
 		A7D7764A2BA46D1400C7A6BD /* TimerSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D776492BA46D1400C7A6BD /* TimerSmall.swift */; };
 		A7D7764C2BA46DE900C7A6BD /* TimerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D7764B2BA46DE900C7A6BD /* TimerComponent.swift */; };
+		A7D776A62BA4941000C7A6BD /* PomoSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D776A52BA4941000C7A6BD /* PomoSettings.swift */; };
+		A7D776A82BA4EC8600C7A6BD /* WheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D776A72BA4EC8600C7A6BD /* WheelPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +184,8 @@
 		A7D776452BA4698D00C7A6BD /* SettingsTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTimerView.swift; sourceTree = "<group>"; };
 		A7D776492BA46D1400C7A6BD /* TimerSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSmall.swift; sourceTree = "<group>"; };
 		A7D7764B2BA46DE900C7A6BD /* TimerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerComponent.swift; sourceTree = "<group>"; };
+		A7D776A52BA4941000C7A6BD /* PomoSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomoSettings.swift; sourceTree = "<group>"; };
+		A7D776A72BA4EC8600C7A6BD /* WheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +335,7 @@
 				A7CECB682BA1E2AF00DFDF5A /* SettingsSound.swift */,
 				A7D776492BA46D1400C7A6BD /* TimerSmall.swift */,
 				A7D7764B2BA46DE900C7A6BD /* TimerComponent.swift */,
+				A7D776A72BA4EC8600C7A6BD /* WheelPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 			children = (
 				A75A8B8A2B8FEF5E00CECAE5 /* Tag.swift */,
 				A7BA64AA2B9A1D75006DBE72 /* Cat.swift */,
+				A7D776A52BA4941000C7A6BD /* PomoSettings.swift */,
 				A7CECB382B9E3AC900DFDF5A /* Session.swift */,
 				A7BA64AC2B9A1DA9006DBE72 /* Pomodoro.swift */,
 			);
@@ -549,6 +555,7 @@
 				A7D776462BA4698D00C7A6BD /* SettingsTimerView.swift in Sources */,
 				A7D7764A2BA46D1400C7A6BD /* TimerSmall.swift in Sources */,
 				A7CECB912BA250B400DFDF5A /* TagComponent.swift in Sources */,
+				A7D776A82BA4EC8600C7A6BD /* WheelPicker.swift in Sources */,
 				A7B3A51E2B8D351B0025495E /* TimerView.swift in Sources */,
 				A75A8B8B2B8FEF5E00CECAE5 /* Tag.swift in Sources */,
 				A7BA64A12B990B45006DBE72 /* HomeView.swift in Sources */,
@@ -570,6 +577,7 @@
 				A7D776442BA3A7D000C7A6BD /* NewTagComponent.swift in Sources */,
 				A7CECB422B9FCF3100DFDF5A /* SettingsProperty.swift in Sources */,
 				A7BA64A32B991D7C006DBE72 /* SettingsView.swift in Sources */,
+				A7D776A62BA4941000C7A6BD /* PomoSettings.swift in Sources */,
 				A7D7764C2BA46DE900C7A6BD /* TimerComponent.swift in Sources */,
 				A7CECB632BA1CFB300DFDF5A /* DesignColors.swift in Sources */,
 				A7BA64A52B991D89006DBE72 /* TagsView.swift in Sources */,

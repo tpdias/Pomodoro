@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingsSound: View {
     var optionName: String
     @Binding var isOn: Bool
+   
     var body: some View {
         ZStack{
             Rectangle()
@@ -17,6 +18,10 @@ struct SettingsSound: View {
                 .frame(width: 75, height: 75)
                 .background(isOn ? Color.Gray2 : Color.Gray5)
                 .cornerRadius(25)
+            Image(isOn ? optionName.appending("Selected") : optionName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 45, height: 45)
             VStack {
                 Spacer()
                 Text(optionName)
